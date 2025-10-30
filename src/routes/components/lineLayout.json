@@ -1,0 +1,284 @@
+[
+    [
+        {
+            "name": "",
+            "len": 2
+        },
+        {
+            "name": "divider",
+            "len": 0
+        },
+        {
+            "name": "Mango",
+            "len": 1
+        },
+        {
+            "name": "Wasabi",
+            "len": 1
+        },
+        {
+            "name": "Lime",
+            "len": 1
+        },
+        {
+            "items": [
+                {
+                    "name": "Chipotle Mayo"
+                }
+            ],
+            "len": 1
+        },
+        {
+            "items": [
+                {
+                    "name": "Fire BP"
+                },
+                {
+                    "name": "Hot BP"
+                },
+                {
+                    "name": "Spicy BP"
+                }
+            ],
+            "len": 2
+        },
+        {
+            "name": "Spicy Chicken",
+            "len": 1
+        },
+        {
+            "name": "Chicken",
+            "len": 1
+        },
+        {
+            "name": "",
+            "len": 1
+        },
+        {
+            "name": "divider",
+            "len": 0
+        },
+        {
+            "name": "Albacore",
+            "len": 1
+        },
+        {
+            "name": "Scallops",
+            "len": 1
+        },
+        {
+            "name": "Tofu",
+            "len": 1
+        },
+        {
+            "name": "Carrots",
+            "len": 2
+        },
+        {
+            "name": "White Onion",
+            "len": 2
+        },
+        {
+            "name": "Spiraled Cucumber",
+            "len": 2
+        },
+        {
+            "name": "divider",
+            "len": 0
+        },
+        {
+            "name": "",
+            "len": 2
+        }
+    ],
+    [
+        {
+            "name": "Wonton Crisps",
+            "len": 1
+        },
+        {
+            "name": "Crunchy Onions",
+            "len": 1
+        },
+        {
+            "name": "divider",
+            "len": 0
+        },
+        {
+            "name": "Jalapeños",
+            "len": 1
+        },
+        {
+            "name": "Red Onions",
+            "len": 1
+        },
+        {
+            "name": "Ginger",
+            "len": 1
+        },
+        {
+            "items": [
+                {
+                    "name": "Sriracha Mayo"
+                },
+                {
+                    "name": "Eel Sauce"
+                }
+            ],
+            "len": 1
+        },
+        {
+            "items": [
+                {
+                    "name": "Ponzu"
+                },
+                {
+                    "name": "Cilantro Lime"
+                },
+                {
+                    "name": "Blue Poke"
+                }
+            ],
+            "len": 2
+        },
+        {
+            "name": "Octopus",
+            "len": 1
+        },
+        {
+            "name": "Yellowtail",
+            "len": 1
+        },
+        {
+            "name": "Shrimp",
+            "len": 1
+        },
+        {
+            "name": "divider",
+            "len": 0
+        },
+        {
+            "name": "Ahi Tuna",
+            "len": 2
+        },
+        {
+            "name": "",
+            "len": 1
+        },
+        {
+            "name": "Cucumber",
+            "len": 2
+        },
+        {
+            "name": "Edamame",
+            "image-name": "edamame-background.png",
+            "len": 2
+        },
+        {
+            "name": "Quinoa",
+            "len": 2
+        },
+        {
+            "name": "divider",
+            "len": 0
+        },
+        {
+            "name": "Mixed Greens",
+            "len": 1
+        },
+        {
+            "name": "Wonton Crisps",
+            "len": 1
+        }
+    ],
+    [
+        {
+            "name": "Seaweed Flakes",
+            "len": 1
+        },
+        {
+            "items": [
+                {
+                    "name": "Sesame Seeds"
+                },
+                {
+                    "name": "Sesame Oil"
+                }
+            ],
+            "len": 1
+        },
+        {
+            "name": "divider",
+            "len": 0
+        },
+        {
+            "name": "Cilantro",
+            "len": 1
+        },
+        {
+            "name": "Green Onions",
+            "len": 2
+        },
+        {
+            "name": "Masago",
+            "len": 1
+        },
+        {
+            "name": "Seaweed Salad",
+            "len": 2
+        },
+        {
+            "name": "Grilled Salmon",
+            "len": 1
+        },
+        {
+            "name": "Spicy Tuna",
+            "len": 2
+        },
+        {
+            "name": "divider",
+            "len": 0
+        },
+        {
+            "name": "Salmon",
+            "len": 2
+        },
+        {
+            "name": "",
+            "len": 1
+        },
+        {
+            "name": "Krab Salad",
+            "len": 2
+        },
+        {
+            "name": "Avocado",
+            "image-name": "avocado-slice-background.png",
+            "len": 2
+        },
+        {
+            "name": "Spicy Krab Salad",
+            "len": 2
+        },
+        {
+            "name": "divider",
+            "len": 0
+        },
+        {
+            "items": [
+                {
+                    "name": "White Rice"
+                }
+            ],
+            "len": 1
+        },
+        {
+            "items": [
+                {
+                    "name": "Brown Rice"
+                }
+            ],
+            "len": 1
+        }
+    ]
+]
