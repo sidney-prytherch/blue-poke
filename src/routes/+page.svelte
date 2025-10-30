@@ -1,5 +1,6 @@
 <script lang="ts">
 	import TutorialPage from './components/TutorialPage.svelte';
+	import lineLayout from './components/lineLayout.json';
 
 	let currentPage = $state('home');
 
@@ -10,7 +11,7 @@
 		brownRice: 'Brown Rice',
 		spiraledCucumber: 'Spiraled Cucmber',
 		quinoa: 'Quinoa',
-		avacado: 'Avacado',
+		avocado: 'Avocado',
 		cucumber: 'Cucumber',
 		carrots: 'Carrots',
 		whiteOnion: 'White Onion',
@@ -57,7 +58,7 @@
 
 	let foods = {
 		Base: ['brownRice', 'mixedGreens', 'quinoa', 'spiraledCucumber', 'whiteRice', 'wontonBase'],
-		'Add-ons': ['avacado', 'carrots', 'cucumber', 'edamame', 'krab', 'spicyKrab', 'whiteOnion'],
+		'Add-ons': ['avocado', 'carrots', 'cucumber', 'edamame', 'krab', 'spicyKrab', 'whiteOnion'],
 		Proteins: [
 			'ahiTuna',
 			'salmon',
@@ -84,7 +85,7 @@
 			'spicy',
 			'sriracha'
 		],
-		'Toppings B': [
+		Toppings: [
 			'cilantro',
 			'ginger',
 			'greenOnion',
@@ -120,11 +121,11 @@
 		'Spicy Poké Locos': {
 			instructions:
 				'- Open bag of doritos. \n\
-- Inside, put 1 scoop of Ahi Tuna, 3 slices of avacado, sesame seeds, green onions, crunchy onions. \n\
+- Inside, put 1 scoop of Ahi Tuna, 3 slices of avocado, sesame seeds, green onions, crunchy onions. \n\
 - Add hot blue poke and chipotle Mayo.',
 			foods: {
 				ahiTuna: '1 scoop',
-				avacado: '3 slices',
+				avocado: '3 slices',
 				sesameSeeds: true,
 				greenOnion: true,
 				crunchyOnions: true,
@@ -147,7 +148,7 @@
 		sesameOil: '',
 		edamame: '',
 		wasabi: '',
-		avacado: '',
+		avocado: '',
 		cilantro: '',
 		cucumber: '',
 		spiraledCucumber: '',
@@ -214,9 +215,9 @@
 	const updateProteinA = () => {
 		if (proteinA !== '') {
 			proteinCounts[proteinA]--;
-			isSelected[proteinA] = proteinCounts[proteinA]
-		extraDetails[proteinA] =
-			` (${proteinCounts[proteinA]} scoop${proteinCounts[proteinA] > 1 ? 's' : ''})`;
+			isSelected[proteinA] = proteinCounts[proteinA];
+			extraDetails[proteinA] =
+				` (${proteinCounts[proteinA]} scoop${proteinCounts[proteinA] > 1 ? 's' : ''})`;
 			if (proteinCounts[proteinA] === 0) {
 				extraDetails[proteinA] = '';
 			}
@@ -231,7 +232,7 @@
 	const updateProteinB = () => {
 		if (proteinB !== '') {
 			proteinCounts[proteinB]--;
-			isSelected[proteinB] = proteinCounts[proteinB]
+			isSelected[proteinB] = proteinCounts[proteinB];
 			extraDetails[proteinB] =
 				` (${proteinCounts[proteinB]} scoop${proteinCounts[proteinB] > 1 ? 's' : ''})`;
 			if (proteinCounts[proteinB] === 0) {
@@ -248,9 +249,9 @@
 	const updateProteinC = () => {
 		if (proteinC !== '') {
 			proteinCounts[proteinC]--;
-			isSelected[proteinC] = proteinCounts[proteinC]
-		extraDetails[proteinC] =
-			` (${proteinCounts[proteinC]} scoop${proteinCounts[proteinC] > 1 ? 's' : ''})`;
+			isSelected[proteinC] = proteinCounts[proteinC];
+			extraDetails[proteinC] =
+				` (${proteinCounts[proteinC]} scoop${proteinCounts[proteinC] > 1 ? 's' : ''})`;
 			if (proteinCounts[proteinC] === 0) {
 				extraDetails[proteinC] = '';
 			}
@@ -266,8 +267,8 @@
 		if (proteinD !== '') {
 			proteinCounts[proteinD]--;
 			isSelected[proteinD] = proteinCounts[proteinD];
-		extraDetails[proteinD] =
-			` (${proteinCounts[proteinD]} scoop${proteinCounts[proteinD] > 1 ? 's' : ''})`;
+			extraDetails[proteinD] =
+				` (${proteinCounts[proteinD]} scoop${proteinCounts[proteinD] > 1 ? 's' : ''})`;
 			if (proteinCounts[proteinD] === 0) {
 				extraDetails[proteinD] = '';
 			}
@@ -292,7 +293,7 @@
 		sesameOil: 0,
 		edamame: 0,
 		wasabi: 0,
-		avacado: 0,
+		avocado: 0,
 		cilantro: 0,
 		cucumber: 0,
 		spiraledCucumber: 0,
@@ -361,206 +362,102 @@
 </script>
 
 <div class:invisible={currentPage !== 'home'}>
-	<button onclick={goToTutorialPage}>Tutorial Page</button>
-	<div class="flex-container horizontal base">
-		<div id="dry-toppings" class="flex-container">
-			<div class="flex-container horizontal">
-				<div id="wonton-crisps" class="rect" class:unselected={!isSelected.wontonCrisps}>
-					<span>wonton{extraDetails.wontonCrisps}</span>
+	<!-- <button onclick={goToTutorialPage}>Tutorial Page</button> -->
+	<div class="full flex horizontal line">
+		<!-- {#each lineLayout as lineSection}
+        <div class="flex" class:two-row-space={lineSection.length === 2} class:three-row-space={lineSection.length === 3}> -->
+		<div class="flex three-row-space">
+			{#each lineLayout as lineRow}
+				<div class="flex horizontal line">
+					{#each lineRow as item}
+						{#if item.len === 1}
+							{#if item.name && item.name !== ''}
+								<div class="square">
+									<div
+										class="single"
+										class:unselected={!isSelected[item['code-name'] ? item['code-name'] : '']}
+										style={item['image-name'] && item['image-name'] !== ''
+											? `background: url(/src/lib/assets/${item['image-name']}) round;`
+											: `background-color: ${item['color-code']};`}
+									>
+										{item.name}{item['code-name'] ? extraDetails[item['code-name']] : ''}
+									</div>
+								</div>
+							{:else}
+								<div class="square flex horizontal circles">
+									{#each item.items as circularItem}
+										<div
+											class:halfHeight={(item.items && item.items.length > 1) ||
+												circularItem.isSauce}
+											class:unselected={!isSelected[
+												circularItem['code-name'] ? circularItem['code-name'] : ''
+											]}
+											class="circle"
+											style={circularItem['image-name'] && circularItem['image-name'] !== ''
+												? `background: url(/src/lib/assets/${circularItem['image-name']}) round;`
+												: `background-color: ${circularItem['color-code']};`}
+										>
+											{circularItem.abbreviation}{circularItem['code-name']
+												? extraDetails[circularItem['code-name']]
+												: ''}
+										</div>
+									{/each}
+								</div>
+							{/if}
+							<!-- <div class="square">
+								<div
+									class:unselected={!isSelected[item['code-name'] ? item['code-name'] : '']}
+									style={item['image-name'] && item['image-name'] !== ''
+										? `background: url(/src/lib/assets/${item['image-name']}) round;`
+										: `background-color: ${item['color-code']};`}
+								>
+									{item.name}{item['code-name'] ? extraDetails[item['code-name']] : ''}
+								</div>
+							</div> -->
+						{/if}
+						{#if item.len === 2}
+							{#if item.name && item.name !== ''}
+								<div class="rect">
+									<div
+										class="single"
+										class:unselected={!isSelected[item['code-name'] ? item['code-name'] : '']}
+										style={item['image-name'] && item['image-name'] !== ''
+											? `background: url(/src/lib/assets/${item['image-name']}) round;`
+											: `background-color: ${item['color-code']};`}
+									>
+										{item.name}{item['code-name'] ? extraDetails[item['code-name']] : ''}
+									</div>
+								</div>
+							{:else}
+								<div class="rect flex horizontal circles">
+									{#each item.items as circularItem}
+										<div
+											class:halfHeight={(item.items && item.items.length > 1) ||
+												circularItem.isSauce}
+											class:unselected={!isSelected[
+												circularItem['code-name'] ? circularItem['code-name'] : ''
+											]}
+											class="circle"
+											style={circularItem['image-name'] && circularItem['image-name'] !== ''
+												? `background: url(/src/lib/assets/${circularItem['image-name']}) round;`
+												: `background-color: ${circularItem['color-code']};`}
+										>
+											{circularItem.abbreviation}{circularItem['code-name']
+												? extraDetails[circularItem['code-name']]
+												: ''}
+										</div>
+									{/each}
+								</div>
+							{/if}
+						{/if}
+						{#if item.len === 0}
+							<div class="divider"></div>
+						{/if}
+					{/each}
 				</div>
-				<div id="crunchy-onions" class="rect" class:unselected={!isSelected.crunchyOnions}>
-					<span>crunchy onions{extraDetails.crunchyOnions}</span>
-				</div>
-			</div>
-			<div class="flex-container horizontal">
-				<div id="seaweed-flakes" class="rect" class:unselected={!isSelected.seaweedFlakes}>
-					<span>flakes{extraDetails.seaweedFlakes}</span>
-				</div>
-				<div id="sesame-seeds" class="circle" class:unselected={!isSelected.sesameSeeds}>
-					<span>seeds{extraDetails.sesameSeeds}</span>
-				</div>
-				<div id="sesame-oil" class="circle" class:unselected={!isSelected.sesameOil}>
-					<span>oil{extraDetails.sesameOil}</span>
-				</div>
-			</div>
+			{/each}
 		</div>
-		<div id="left-side-line" class="flex-container">
-			<div class="flex-container horizontal">
-				<div id="mango" class="square-line rect" class:unselected={!isSelected.mango}>
-					<span>mango{extraDetails.mango}</span>
-				</div>
-				<div id="wasabi" class="square-line rect" class:unselected={!isSelected.wasabi}>
-					<span>wasabi{extraDetails.wasabi}</span>
-				</div>
-				<div id="lime" class="square-line rect" class:unselected={!isSelected.lime}>
-					<span>lime{extraDetails.lime}</span>
-				</div>
-				<div class="flex-container horizontal square-line rect">
-					<div id="chipotle" class="sauce circle" class:unselected={!isSelected.chipotle}>
-						<span>ch</span>
-					</div>
-				</div>
-				<div class="flex-container horizontal rect-line rect">
-					<div id="fire" class="sauce circle" class:unselected={!isSelected.fire}>
-						<span>f bp</span>
-					</div>
-					<div id="hot" class="sauce circle" class:unselected={!isSelected.hot}>
-						<span>h bp</span>
-					</div>
-					<div id="spicy" class="sauce circle" class:unselected={!isSelected.spicy}>
-						<span>s bp</span>
-					</div>
-				</div>
-				<div
-					id="spicy-chicken"
-					class="square-line rect"
-					class:unselected={!isSelected.spicyChicken}
-				>
-					<span>spicy chicken{extraDetails.spicyChicken}</span>
-				</div>
-				<div id="chicken" class="square-line rect" class:unselected={!isSelected.chicken}>
-					<span>chicken{extraDetails.chicken}</span>
-				</div>
-				<div class="square-line rect"><span>-</span></div>
-			</div>
-			<div class="flex-container horizontal">
-				<div id="jalapeno" class="square-line rect" class:unselected={!isSelected.jalapeno}>
-					<span>jalapenos{extraDetails.jalapeno}</span>
-				</div>
-				<div id="red-onion" class="square-line rect" class:unselected={!isSelected.redOnion}>
-					<span>red onion{extraDetails.redOnion}</span>
-				</div>
-				<div id="ginger" class="square-line rect" class:unselected={!isSelected.ginger}>
-					<span>ginger{extraDetails.ginger}</span>
-				</div>
-				<div class="flex-container horizontal square-line rect">
-					<div id="sriracha" class="sauce circle" class:unselected={!isSelected.sriracha}>
-						<span>sr</span>
-					</div>
-					<div id="eel" class="sauce circle" class:unselected={!isSelected.eel}>
-						<span>eel</span>
-					</div>
-				</div>
-				<div class="flex-container horizontal rect-line rect">
-					<div id="ponzu" class="sauce circle" class:unselected={!isSelected.ponzu}>
-						<span>pon</span>
-					</div>
-					<div id="cilantro-lime" class="sauce circle" class:unselected={!isSelected.cilantroLime}>
-						<span>cil</span>
-					</div>
-					<div id="blue-poke" class="sauce circle" class:unselected={!isSelected.bluePoke}>
-						<span>bp</span>
-					</div>
-				</div>
-				<div id="octopus" class="square-line rect" class:unselected={!isSelected.octopus}>
-					<span>octopus{extraDetails.octopus}</span>
-				</div>
-				<div id="yellowtail" class="square-line rect" class:unselected={!isSelected.yellowtail}>
-					<span>yellowtail{extraDetails.yellowtail}</span>
-				</div>
-				<div id="shrimp" class="square-line rect" class:unselected={!isSelected.shrimp}>
-					<span>shrimp{extraDetails.shrimp}</span>
-				</div>
-			</div>
-			<div class="flex-container horizontal">
-				<div id="cilantro" class="square-line rect" class:unselected={!isSelected.cilantro}>
-					<span>cilantro{extraDetails.cilantro}</span>
-				</div>
-				<div id="green-onion" class="rect-line rect" class:unselected={!isSelected.greenOnion}>
-					<span>green onion{extraDetails.greenOnion}</span>
-				</div>
-				<div id="masago" class="square-line rect" class:unselected={!isSelected.masago}>
-					<span>masago{extraDetails.masago}</span>
-				</div>
-				<div id="seaweed-salad" class="rect-line rect" class:unselected={!isSelected.seaweedSalad}>
-					<span>seaweed salad{extraDetails.seaweedSalad}</span>
-				</div>
-				<div
-					id="grilled-salmon"
-					class="square-line rect"
-					class:unselected={!isSelected.grilledSalmon}
-				>
-					<span>grilled salmon{extraDetails.grilledSalmon}</span>
-				</div>
-				<div id="spicy-tuna" class="rect-line rect" class:unselected={!isSelected.spicyTuna}>
-					<span>spicy tuna{extraDetails.spicyTuna}</span>
-				</div>
-			</div>
-		</div>
-		<div id="right-side-line" class="flex-container">
-			<div class="flex-container horizontal">
-				<div id="albacore" class="square-line rect" class:unselected={!isSelected.albacore}>
-					<span>albacore{extraDetails.albacore}</span>
-				</div>
-				<div id="scallops" class="square-line rect" class:unselected={!isSelected.scallops}>
-					<span>scallops{extraDetails.scallops}</span>
-				</div>
-				<div id="tofu" class="square-line rect" class:unselected={!isSelected.tofu}>
-					<span>tofu{extraDetails.tofu}</span>
-				</div>
-				<div id="carrots" class="rect-line rect" class:unselected={!isSelected.carrots}>
-					<span>carrots{extraDetails.carrots}</span>
-				</div>
-				<div id="white-onion" class="rect-line rect" class:unselected={!isSelected.whiteOnion}>
-					<span>white onion{extraDetails.whiteOnion}</span>
-				</div>
-				<div
-					id="spiraled-cucumber"
-					class="rect-line rect"
-					class:unselected={!isSelected.spiraledCucumber}
-				>
-					<span>spiraled cucumber{extraDetails.spiraledCucumber}</span>
-				</div>
-			</div>
-			<div class="flex-container horizontal">
-				<div id="ahi-tuna" class="rect-line rect" class:unselected={!isSelected.ahiTuna}>
-					<span>ahi tuna{extraDetails.ahiTuna}</span>
-				</div>
-				<div class="square-line rect"><span>-</span></div>
-				<div id="cucumber" class="rect-line rect" class:unselected={!isSelected.cucumber}>
-					<span>p. cucumber{extraDetails.cucumber}</span>
-				</div>
-				<div id="edamame" class="rect-line rect" class:unselected={!isSelected.edamame}>
-					<span>edamame{extraDetails.edamame}</span>
-				</div>
-				<div id="quinoa" class="rect-line rect" class:unselected={!isSelected.quinoa}>
-					<span>quinoa{extraDetails.quinoa}</span>
-				</div>
-			</div>
-			<div class="flex-container horizontal">
-				<div id="salmon" class="rect-line rect" class:unselected={!isSelected.salmon}>
-					<span>salmon{extraDetails.salmon}</span>
-				</div>
-				<div class="square-line rect"><span>-</span></div>
-				<div id="krab" class="rect-line rect" class:unselected={!isSelected.krab}>
-					<span>krab{extraDetails.krab}</span>
-				</div>
-				<div id="avacado" class="rect-line rect" class:unselected={!isSelected.avacado}>
-					<span>avacado{extraDetails.avacado}</span>
-				</div>
-				<div id="spicy-krab" class="rect-line rect" class:unselected={!isSelected.spicyKrab}>
-					<span>spicy krab{extraDetails.spicyKrab}</span>
-				</div>
-			</div>
-		</div>
-		<div id="bases" class="flex-container">
-			<div class="flex-container horizontal">
-				<div id="mixed-greens" class="rect" class:unselected={!isSelected.mixedGreens}>
-					<span>mixed greens{extraDetails.mixedGreens}</span>
-				</div>
-				<div id="wonton-base" class="rect" class:unselected={!isSelected.wontonBase}>
-					<span>wonton crisps{extraDetails.wontonBase}</span>
-				</div>
-			</div>
-			<div class="flex-container horizontal">
-				<div id="white-rice" class="rect" class:unselected={!isSelected.whiteRice}>
-					<span>white rice{extraDetails.whiteRice}</span>
-				</div>
-				<div id="brown-rice" class="rect" class:unselected={!isSelected.brownRice}>
-					<span>brown rice{extraDetails.brownRice}</span>
-				</div>
-			</div>
-		</div>
+		<!-- {/each} -->
 	</div>
 	<select bind:value={selectedTutorial} onchange={updateFromRecipe}>
 		{#each Object.keys(presets) as recipe}
@@ -576,10 +473,10 @@
 			</p>
 		{/each}
 	{/if}
-	<div class:invisible={selectedTutorial !== 'bowl'} class="flex-container horizontal">
+	<div class:invisible={selectedTutorial !== 'bowl'} class="flex horizontal">
 		{#each Object.entries(foods) as [foodGroupName, foodGroup]}
 			{#if foodGroupName === 'Proteins'}
-				<div class="flex-container">
+				<div class="flex">
 					<h3>{foodGroupName}</h3>
 					<select bind:value={newProteinA} onchange={updateProteinA}>
 						<option value=""></option>
@@ -615,7 +512,7 @@
 					</select>
 				</div>
 			{:else}
-				<div class="flex-container">
+				<div class="flex">
 					<h3>{foodGroupName}</h3>
 					{#each foodGroup as foodName}
 						<div>
@@ -636,313 +533,127 @@
 	</div>
 </div>
 
-
 <div class:invisible={currentPage !== 'tutorial-page'}>
 	<TutorialPage {returnHome}></TutorialPage>
 </div>
 
 <style>
-	.invisible {
-		visibility: hidden;
+	:root {
+		--border-size: 2px;
+		--divider-size: 4px;
 	}
-
-	.base,
-	.base > div {
-		border: 4px black solid;
+	.full {
+		width: 99vw;
+		height: auto;
 	}
-
-	.base {
-		width: min-content;
-	}
-
-	#dry-toppings {
-		background-color: lightgreen;
-	}
-
-	#left-side-line {
-		background-color: lightblue;
-	}
-
-	.square-line {
-		height: 60px;
-		width: 60px;
-		margin: 2px;
-		background-color: gray;
-	}
-
-	.rect-line {
-		height: 60px;
-		width: 132px;
-		margin: 2px;
-		background-color: gray;
-	}
-
-	.circle {
-		border-radius: 50%;
-	}
-
-	.sauce {
-		aspect-ratio: 1 / 1;
-		height: 30px;
-		background-color: blue;
-	}
-
-	.rect {
-		border-radius: 3px;
-	}
-
-	.invisible {
-		display: none;
-	}
-
-	.flex-container {
+	/* .full > div {
+        align-content: stretch;
+    } */
+	.flex {
 		display: flex;
 		flex-direction: column;
 	}
-
-	.square-line,
-	.rect-line {
-		justify-content: space-around;
+	.line {
+		justify-content: space-between;
 	}
-
 	.horizontal {
 		flex-direction: row;
 	}
-
-	#grilled-salmon,
-	#mixed-greens,
-	#wonton-base,
-	#white-rice,
-	#brown-rice,
-	#wonton-crisps,
-	#crunchy-onions,
-	#seaweed-flakes,
-	#sesame-seeds,
-	#sesame-oil,
-	#edamame,
-	#wasabi,
-	#avacado,
-	#cilantro,
-	#cucumber,
-	#spiraled-cucumber,
-	#green-onion,
-	#jalapeno,
-	#red-onion,
-	#quinoa,
-	#mango,
-	#carrots,
-	#masago,
-	#ahi-tuna,
-	#octopus,
-	#salmon,
-	#krab,
-	#spicy-chicken,
-	#spicy-tuna,
-	#shrimp,
-	#chipotle,
-	#sriracha,
-	#eel,
-	#ginger,
-	#spicy-krab,
-	#seaweed-salad,
-	#lime,
-	#white-onion,
-	#tofu,
-	#scallops,
-	#chicken,
-	#albacore,
-	#yellowtail,
-	#fire,
-	#hot,
-	#spicy,
-	#blue-poke,
-	#cilantro-lime,
-	#ponzu,
-	.square-line,
-	.rect-line {
+	.circles {
+		justify-content: space-evenly;
+	}
+	.square > .halfHeight {
+		max-height: 45%;
+	}
+	.rect > .halfHeight {
+		max-height: 63%;
+	}
+	.rect > .circle,
+	.square > .circle {
+		border-radius: 50%;
+		flex-shrink: 1;
+		border: 1px pink solid;
+		aspect-ratio: 1 / 1;
+		color: white;
 		justify-content: center;
 		text-align: center;
-		border: 4px rgb(255, 0, 238) solid;
+		text-shadow:
+			1px 1px 2px black,
+			0 0 1em black,
+			0 0 0.2em black;
 	}
-
-	.square-line,
-	.rect-line {
-		border-color: transparent;
+	.square {
+		flex: 1;
+		/* aspect-ratio: 1 / 1; */
 	}
-
-	#grilled-salmon {
-		background-color: rgb(244, 216, 175);
+	.rect {
+		flex: 2;
+		padding: 0px var(--border-size) 0px var(--border-size) !important;
+		background-repeat: round !important;
+		/* background-image: var(--backgroundsrc); */
+		/* border-image-source: url("/src/lib/assets/avocado-slice-background.png");
+        border-image-slice: 48 68 78 68 fill;
+        border-image-width: 24px 34px 39px 34px;
+        border-image-outset: 0px 0px 0px 0px;
+        border-image-repeat: round round; 
+        border-style: solid;
+        border-width: 24px 34px 39px 34px; */
+		/* aspect-ratio: 2 / 1; */
 	}
-
-	#mixed-greens,
-	#wonton-base,
-	#white-rice,
-	#brown-rice,
-	#wonton-crisps,
-	#crunchy-onions,
-	#seaweed-flakes,
-	#sesame-seeds,
-	#sesame-oil {
-		background-color: aqua;
-		margin: 2px;
-	}
-
-	#mixed-greens,
-	#wonton-base,
-	#white-rice,
-	#brown-rice,
-	#crunchy-onions,
-	#wonton-crisps,
-	#seaweed-flakes {
-		height: 90px;
-		width: 90px;
-	}
-
-	#edamame,
-	#wasabi {
-		background-color: rgb(97, 178, 97);
-	}
-
-	#avacado,
-	#cilantro {
-		background-color: rgb(50, 127, 9);
-	}
-
-	#cucumber,
-	#spiraled-cucumber,
-	#green-onion {
-		background-color: rgb(58, 132, 58);
-	}
-
-	#jalapeno {
-		background-color: rgb(16, 59, 16);
-		color: white;
-	}
-
-	#red-onion {
-		background-color: rgb(142, 48, 83);
-		color: white;
-	}
-
-	#quinoa {
-		background-color: rgb(158, 147, 80);
-	}
-
-	#mango {
-		background-color: rgb(208, 168, 25);
-	}
-
-	#carrots,
-	#masago {
-		background-color: rgb(202, 111, 0);
-	}
-
-	#ahi-tuna,
-	#octopus {
-		background-color: rgb(125, 51, 74);
-		color: white;
-	}
-
-	#salmon {
-		background-color: rgb(200, 132, 113);
-	}
-
-	#krab {
-		background-color: rgb(255, 159, 193);
-	}
-
-	#spicy-chicken {
-		background-color: rgb(149, 79, 24);
-	}
-
-	#spicy-tuna {
-		background-color: rgb(147, 46, 46);
-		color: white;
-	}
-
-	#shrimp {
-		background-color: rgb(240, 150, 184);
-	}
-
-	#chipotle {
-		background-color: rgb(129, 68, 21);
-	}
-
-	#sriracha {
-		background-color: rgb(163, 70, 31);
-	}
-
-	#eel {
-		background-color: rgb(31, 18, 18);
-		color: white;
-	}
-
-	#ginger {
-		background-color: rgb(168, 127, 76);
-	}
-
-	#spicy-krab {
-		background-color: rgb(161, 113, 41);
-	}
-
-	#mixed-greens,
-	#seaweed-salad,
-	#lime {
-		background-color: green;
-	}
-
-	#white-rice,
-	#white-onion,
-	#tofu,
-	#scallops,
-	#chicken {
-		background-color: rgb(226, 218, 202);
-	}
-
-	#albacore,
-	#yellowtail {
-		background-color: rgb(191, 147, 131);
-	}
-
-	#brown-rice {
-		background-color: rgb(227, 203, 153);
-	}
-
-	#wonton-crisps,
-	#wonton-base {
-		background-color: rgb(175, 137, 0);
-	}
-
-	#crunchy-onions {
-		background-color: rgb(112, 88, 0);
-	}
-
-	#seaweed-flakes {
-		background-color: rgb(5, 49, 0);
-		color: white;
-	}
-
-	#sesame-seeds {
+	.divider {
+		min-width: var(--divider-size) !important;
+		flex-shrink: 1;
 		background-color: black;
+	}
+	.square,
+	.rect,
+	.full {
+		border: solid pink var(--border-size);
+		background-color: rgb(133, 133, 133);
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		overflow-x: hidden;
+		overflow-y: hidden;
+	}
+	.square > .single,
+	.rect > .single {
 		color: white;
-		height: 40px;
-		width: 40px;
+		justify-content: center;
+		text-align: center;
+		text-shadow:
+			1px 1px 2px black,
+			0 0 1em black,
+			0 0 0.2em black;
+	}
+	.square > .single {
+		min-height: 100% !important;
+		aspect-ratio: 1 / 1 !important;
+	}
+	.rect > .single {
+		min-height: 100% !important;
+		aspect-ratio: 2 / 1 !important;
+	}
+	.three-row-space {
+		background-color: aquamarine;
+		width: 100%;
+		height: fit-content;
+	}
+	.three-row-space > div {
+		width: 100%;
+		height: 33%;
 	}
 
-	#sesame-oil {
-		background-color: rgb(48, 34, 0);
-		color: white;
-		height: 32px;
-		width: 32px;
+	.invisible {
+		visibility: hidden;
+		display: none;
 	}
 
 	.unselected {
 		background-color: gray !important;
+		background-image: none !important;
 		border-color: transparent !important;
 		color: transparent !important;
-	}
-
-	span {
-		height: 100%;
+		text-shadow: none !important;
 	}
 </style>
