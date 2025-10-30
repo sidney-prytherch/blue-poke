@@ -1,7 +1,6 @@
 <script lang="ts">
     let { returnHome } = $props();
     import lineLayout from "./lineLayout.json"
-    import slices from "$lib/assets/avocado-slice-background.png"
 
     let display = $state('full');
 </script>
@@ -82,6 +81,14 @@
         margin: 0;
         padding: 0;
         box-sizing:border-box;
+        overflow-x: hidden;
+        text-align: center;
+    }
+    .square > div, .rect > div {
+        color: white;
+        text-shadow: 1px 1px 2px black,
+                    0 0 1em black,
+                    0 0 0.2em black;
     }
     .square > div {
         min-height: 100% !important;
