@@ -2,7 +2,8 @@
   "name": "Blue Poke",
   "description": "Blue Poke App",
   "display": "standalone",
-  "start_url": "./blue-poke/",
+  "start_url": "./",
+  "scope": "./",
   "icons": [
     {
       "src": "icons/icone.png",
