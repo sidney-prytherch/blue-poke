@@ -1,8 +1,18 @@
 <script lang="ts">
 	import TutorialPage from './components/TutorialPage.svelte';
+	import TicketPage from './components/TicketPage.svelte';
 	import lineLayout from './components/lineLayout.json';
 
 	let currentPage = $state('home');
+	let lineVisible = $state(true);
+
+	let hideLine = function() {
+		lineVisible = false;
+	}
+
+	let showLine = function() {
+		lineVisible = true;
+	}
 
 	const foodMap: { [key: string]: string } = {
 		mixedGreens: 'Mixed Greens',
@@ -132,7 +142,26 @@
 				hot: true,
 				chipotle: true
 			}
-		}
+		},
+		'ticket': {
+			instructions: '',
+			foods: {
+				whiteRice: true,
+				avocado: true,
+				cucumber: true,
+				edamame: true,
+				ahiTuna: true,
+				salmon: true,
+				shrimp: true,
+				bluePoke: true,
+				cilantroLime: true,
+				crunchyOnions: true,
+				greenOnion: true,
+				jalapeno: true,
+				lime: true,
+				mango: true
+			}
+		},
 	};
 
 	let extraDetails: { [key: string]: string } = $state({
@@ -336,10 +365,13 @@
 
 	const returnHome = () => {
 		currentPage = 'home';
+		showLine();
 	};
 
-	const goToTutorialPage = () => {
-		currentPage = 'tutorial-page';
+	const goToTicketPage = () => {
+		currentPage = 'ticket-page';
+		selectedTutorial = "ticket";
+		updateFromRecipe();
 	};
 
 	const updateFromRecipe = () => {
@@ -361,9 +393,9 @@
 	};
 </script>
 
-<div class:invisible={currentPage !== 'home'}>
-	<!-- <button onclick={goToTutorialPage}>Tutorial Page</button> -->
-	<div class="full flex horizontal line">
+<div class:invisible={currentPage !== 'home' && currentPage !== 'ticket-page'}>
+	
+	<div class="full flex horizontal line" class:invisible={!lineVisible}>
 		<!-- {#each lineLayout as lineSection}
         <div class="flex" class:two-row-space={lineSection.length === 2} class:three-row-space={lineSection.length === 3}> -->
 		<div class="flex three-row-space">
@@ -459,78 +491,88 @@
 		</div>
 		<!-- {/each} -->
 	</div>
-	<select bind:value={selectedTutorial} onchange={updateFromRecipe}>
-		{#each Object.keys(presets) as recipe}
-			<option value={recipe}>
-				{recipe}
-			</option>
-		{/each}
-	</select>
-	{#if presets[selectedTutorial]}
-		{#each presets[selectedTutorial].instructions.split('\n') as instruction}
-			<p>
-				{instruction}
-			</p>
-		{/each}
-	{/if}
-	<div class:invisible={selectedTutorial !== 'bowl'} class="flex horizontal">
-		{#each Object.entries(foods) as [foodGroupName, foodGroup]}
-			{#if foodGroupName === 'Proteins'}
-				<div class="flex">
-					<h3>{foodGroupName}</h3>
-					<select bind:value={newProteinA} onchange={updateProteinA}>
-						<option value=""></option>
+
+	<div class:invisible={currentPage !== 'home'}>
+
+		<select bind:value={selectedTutorial} onchange={updateFromRecipe}>
+			{#each Object.keys(presets) as recipe}
+				<option value={recipe}>
+					{recipe}
+				</option>
+			{/each}
+		</select>
+		<button onclick={goToTicketPage}>Ticket Page</button>
+		{#if presets[selectedTutorial]}
+			{#each presets[selectedTutorial].instructions.split('\n') as instruction}
+				<p>
+					{instruction}
+				</p>
+			{/each}
+		{/if}
+		<div class:invisible={selectedTutorial !== 'bowl'} class="flex horizontal">
+			{#each Object.entries(foods) as [foodGroupName, foodGroup]}
+				{#if foodGroupName === 'Proteins'}
+					<div class="flex">
+						<h3>{foodGroupName}</h3>
+						<select bind:value={newProteinA} onchange={updateProteinA}>
+							<option value=""></option>
+							{#each foodGroup as foodName}
+								<option value={foodName}>
+									{foodMap[foodName]}
+								</option>
+							{/each}
+						</select>
+						<select bind:value={newProteinB} onchange={updateProteinB}>
+							<option value=""></option>
+							{#each foodGroup as foodName}
+								<option value={foodName}>
+									{foodMap[foodName]}
+								</option>
+							{/each}
+						</select>
+						<select bind:value={newProteinC} onchange={updateProteinC}>
+							<option value=""></option>
+							{#each foodGroup as foodName}
+								<option value={foodName}>
+									{foodMap[foodName]}
+								</option>
+							{/each}
+						</select>
+						<select bind:value={newProteinD} onchange={updateProteinD}>
+							<option value=""></option>
+							{#each foodGroup as foodName}
+								<option value={foodName}>
+									{foodMap[foodName]}
+								</option>
+							{/each}
+						</select>
+					</div>
+				{:else}
+					<div class="flex">
+						<h3>{foodGroupName}</h3>
 						{#each foodGroup as foodName}
-							<option value={foodName}>
-								{foodMap[foodName]}
-							</option>
+							<div>
+								<input
+									type="checkbox"
+									id={`${foodName}-select`}
+									onchange={() => {
+										check(foodName);
+									}}
+									checked={isSelected[foodName] === 1}
+								/>
+								<label for={`${foodName}-select`}>{foodMap[foodName]}</label>
+							</div>
 						{/each}
-					</select>
-					<select bind:value={newProteinB} onchange={updateProteinB}>
-						<option value=""></option>
-						{#each foodGroup as foodName}
-							<option value={foodName}>
-								{foodMap[foodName]}
-							</option>
-						{/each}
-					</select>
-					<select bind:value={newProteinC} onchange={updateProteinC}>
-						<option value=""></option>
-						{#each foodGroup as foodName}
-							<option value={foodName}>
-								{foodMap[foodName]}
-							</option>
-						{/each}
-					</select>
-					<select bind:value={newProteinD} onchange={updateProteinD}>
-						<option value=""></option>
-						{#each foodGroup as foodName}
-							<option value={foodName}>
-								{foodMap[foodName]}
-							</option>
-						{/each}
-					</select>
-				</div>
-			{:else}
-				<div class="flex">
-					<h3>{foodGroupName}</h3>
-					{#each foodGroup as foodName}
-						<div>
-							<input
-								type="checkbox"
-								id={`${foodName}-select`}
-								onchange={() => {
-									check(foodName);
-								}}
-								checked={isSelected[foodName] === 1}
-							/>
-							<label for={`${foodName}-select`}>{foodMap[foodName]}</label>
-						</div>
-					{/each}
-				</div>
-			{/if}
-		{/each}
+					</div>
+				{/if}
+			{/each}
+		</div>
 	</div>
+</div>
+
+<div class:invisible={currentPage !== 'ticket-page'}>
+	<TicketPage {showLine} {hideLine}/>
+	<button onclick={returnHome}>Return Home</button>
 </div>
 
 <div class:invisible={currentPage !== 'tutorial-page'}>
