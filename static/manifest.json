@@ -5,7 +5,7 @@
   "start_url": "/blue-poke/",
   "icons": [
     {
-      "src": "icons/icon.png",
+      "src": "icons/icone.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
