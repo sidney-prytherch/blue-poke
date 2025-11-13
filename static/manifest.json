@@ -1,6 +1,6 @@
 {
-  "name": "Vocab App",
-  "description": "App for studying vocab",
+  "name": "Blue Poke",
+  "description": "Blue Poke App",
   "display": "standalone",
   "start_url": "/blue-poke/",
   "icons": [
