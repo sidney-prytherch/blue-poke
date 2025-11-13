@@ -377,7 +377,7 @@
 										class="single"
 										class:unselected={!isSelected[item['code-name'] ? item['code-name'] : '']}
 										style={item['image-name'] && item['image-name'] !== ''
-											? `background: url(/assets/${item['image-name']}) round;`
+											? `background: url(assets/${item['image-name']}) round;`
 											: `background-color: ${item['color-code']};`}
 									>
 										{item.name}{item['code-name'] ? extraDetails[item['code-name']] : ''}
@@ -394,7 +394,7 @@
 											]}
 											class="circle"
 											style={circularItem['image-name'] && circularItem['image-name'] !== ''
-												? `background: url(/assets/${circularItem['image-name']}) round;`
+												? `background: url(assets/${circularItem['image-name']}) round;`
 												: `background-color: ${circularItem['color-code']};`}
 										>
 											{circularItem.abbreviation}{circularItem['code-name']
@@ -422,7 +422,7 @@
 										class="single"
 										class:unselected={!isSelected[item['code-name'] ? item['code-name'] : '']}
 										style={item['image-name'] && item['image-name'] !== ''
-											? `background: url(/assets/${item['image-name']}) round;`
+											? `background: url(assets/${item['image-name']}) round;`
 											: `background-color: ${item['color-code']};`}
 									>
 										{item.name}{item['code-name'] ? extraDetails[item['code-name']] : ''}
@@ -439,7 +439,7 @@
 											]}
 											class="circle"
 											style={circularItem['image-name'] && circularItem['image-name'] !== ''
-												? `background: url(/assets/${circularItem['image-name']}) round;`
+												? `background: url(assets/${circularItem['image-name']}) round;`
 												: `background-color: ${circularItem['color-code']};`}
 										>
 											{circularItem.abbreviation}{circularItem['code-name']
