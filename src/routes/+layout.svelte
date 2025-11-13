@@ -1,5 +1,5 @@
 <script lang="ts">
-	import favicon from '$lib/assets/favicon.svg';
+	import favicon from 'assets/favicon.svg';
 	let { children } = $props();
 
 	if ('serviceWorker' in navigator) {
