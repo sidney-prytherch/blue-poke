@@ -2,6 +2,7 @@
 	import TutorialPage from './components/TutorialPage.svelte';
 	import TicketPage from './components/TicketPage.svelte';
 	import lineLayout from './components/lineLayout.json';
+	import TestPage from './components/TestPage.svelte';
 
 	let currentPage = $state('home');
 	let lineVisible = $state(true);
@@ -374,6 +375,10 @@
 		updateFromRecipe();
 	};
 
+	const goToTestPage = () => {
+		currentPage = 'test-page';
+	};
+
 	const updateFromRecipe = () => {
 		for (let key of Object.keys(isSelected)) {
 			isSelected[key] = 0;
@@ -393,7 +398,12 @@
 	};
 </script>
 
-<div class:invisible={currentPage !== 'home' && currentPage !== 'ticket-page'}>
+
+<div class:invisible={currentPage !== 'test-page'}>
+	
+</div>
+
+<div class:invisible={(currentPage !== 'home' && currentPage !== 'ticket-page')}>
 	
 	<div class="full flex horizontal line" class:invisible={!lineVisible}>
 		<!-- {#each lineLayout as lineSection}
@@ -502,6 +512,7 @@
 			{/each}
 		</select>
 		<button onclick={goToTicketPage}>Ticket Page</button>
+		<button onclick={goToTestPage}>Test Page</button>
 		{#if presets[selectedTutorial]}
 			{#each presets[selectedTutorial].instructions.split('\n') as instruction}
 				<p>
@@ -570,6 +581,10 @@
 	</div>
 </div>
 
+<div class:invisible={currentPage !== 'test-page'}>
+	<TestPage/>
+</div>
+
 <div class:invisible={currentPage !== 'ticket-page'}>
 	<TicketPage {showLine} {hideLine}/>
 	<button onclick={returnHome}>Return Home</button>
@@ -589,9 +604,6 @@
 		width: 99vw;
 		height: auto;
 	}
-	/* .full > div {
-        align-content: stretch;
-    } */
 	.flex {
 		display: flex;
 		flex-direction: column;

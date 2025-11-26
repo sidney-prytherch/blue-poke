@@ -1,0 +1,448 @@
+[
+    [
+        {
+            "items": [
+                {
+                    "name": "Lids",
+                    "code-name": "",
+                    "abbreviation": "Lids",
+                    "class-name": "plastic-bowl-lid",
+                    "isSauce": false,
+                    "image-name": "",
+                    "color-code": "rgba(255, 255, 255, .3)"
+                }
+            ],
+            "len": 2
+        },
+        {
+            "name": "divider",
+            "len": 0
+        },
+        {
+            "name": "Mango",
+            "code-name": "mango",
+            "class-name": "mango-cartoon",
+            "image-name": "",
+            "color-code": "rgb(208, 168, 25)",
+            "len": 1
+        },
+        {
+            "name": "Wasabi",
+            "code-name": "wasabi",
+            "image-name": "",
+            "color-code": "rgb(97, 178, 97)",
+            "len": 1
+        },
+        {
+            "name": "Lime",
+            "code-name": "lime",
+            "image-name": "",
+            "color-code": "green",
+            "len": 1
+        },
+        {
+            "items": [
+                {
+                    "name": "Chipotle Mayo",
+                    "code-name": "chipotle",
+                    "abbreviation": "Chi Mayo",
+                    "isSauce": true,
+                    "image-name": "",
+                    "color-code": "rgb(163, 84, 0)"
+                }
+            ],
+            "len": 1
+        },
+        {
+            "items": [
+                {
+                    "name": "Fire BP",
+                    "code-name": "fire",
+                    "abbreviation": "Fire BP",
+                    "isSauce": true,
+                    "image-name": "",
+                    "color-code": "rgb(83, 12, 0)"
+                },
+                {
+                    "name": "Hot BP",
+                    "code-name": "hot",
+                    "abbreviation": "Hot BP",
+                    "isSauce": true,
+                    "image-name": "",
+                    "color-code": "rgb(108, 16, 0)"
+                },
+                {
+                    "name": "Spicy BP",
+                    "code-name": "spicy",
+                    "abbreviation": "Spi BP",
+                    "isSauce": true,
+                    "image-name": "",
+                    "color-code": "rgb(136, 20, 0)"
+                }
+            ],
+            "len": 2
+        },
+        {
+            "name": "Spicy Chicken",
+            "code-name": "spicyChicken",
+            "image-name": "",
+            "color-code": "rgb(149, 79, 24)",
+            "len": 1
+        },
+        {
+            "name": "Chicken",
+            "code-name": "chicken",
+            "image-name": "",
+            "color-code": "rgb(226, 218, 202)",
+            "len": 1
+        },
+        {
+            "name": "",
+            "len": 1
+        },
+        {
+            "name": "divider",
+            "len": 0
+        },
+        {
+            "name": "Albacore",
+            "code-name": "albacore",
+            "image-name": "",
+            "color-code": "rgb(191, 147, 131)",
+            "len": 1
+        },
+        {
+            "name": "Scallops",
+            "code-name": "scallops",
+            "image-name": "",
+            "color-code": "rgb(226, 218, 202)",
+            "len": 1
+        },
+        {
+            "name": "Tofu",
+            "code-name": "tofu",
+            "image-name": "",
+            "color-code": "rgb(226, 218, 202)",
+            "len": 1
+        },
+        {
+            "name": "Carrots",
+            "code-name": "carrots",
+            "image-name": "",
+            "color-code": "rgb(202, 111, 0)",
+            "len": 2
+        },
+        {
+            "name": "White Onion",
+            "code-name": "whiteOnion",
+            "image-name": "",
+            "color-code": "rgb(226, 218, 202)",
+            "len": 2
+        },
+        {
+            "name": "Spiraled Cucumber",
+            "code-name": "spiraledCucumber",
+            "image-name": "",
+            "color-code": "rgb(58, 132, 58)",
+            "len": 2
+        },
+        {
+            "name": "divider",
+            "len": 0
+        },
+        {
+            "name": "",
+            "len": 2
+        }
+    ],
+    [
+        {
+            "name": "Wonton Crisps",
+            "code-name": "wontonCrisps",
+            "image-name": "",
+            "color-code": "rgb(175, 137, 0)",
+            "len": 1
+        },
+        {
+            "name": "Crunchy Onions",
+            "code-name": "crunchyOnions",
+            "image-name": "",
+            "color-code": "rgb(112, 88, 0)",
+            "len": 1
+        },
+        {
+            "name": "divider",
+            "len": 0
+        },
+        {
+            "name": "Jalapeños",
+            "code-name": "jalapeno",
+            "image-name": "",
+            "color-code": "rgb(16, 59, 16)",
+            "len": 1
+        },
+        {
+            "name": "Red Onions",
+            "code-name": "redOnion",
+            "image-name": "",
+            "color-code": "rgb(142, 48, 83)",
+            "len": 1
+        },
+        {
+            "name": "Ginger",
+            "code-name": "ginger",
+            "image-name": "",
+            "color-code": "rgb(168, 127, 76)",
+            "len": 1
+        },
+        {
+            "items": [
+                {
+                    "name": "Sriracha Mayo",
+                    "code-name": "sriracha",
+                    "abbreviation": "Sri Mayo",
+                    "isSauce": true,
+                    "image-name": "",
+                    "color-code": "rgb(212, 110, 0)"
+                },
+                {
+                    "name": "Eel Sauce",
+                    "code-name": "eel",
+                    "abbreviation": "Eel",
+                    "isSauce": true,
+                    "image-name": "",
+                    "color-code": "rgb(31, 18, 18)"
+                }
+            ],
+            "len": 1
+        },
+        {
+            "items": [
+                {
+                    "name": "Ponzu",
+                    "code-name": "ponzu",
+                    "abbreviation": "Pon",
+                    "isSauce": true,
+                    "image-name": "",
+                    "color-code": "rgb(24, 13, 0)"
+                },
+                {
+                    "name": "Cilantro Lime",
+                    "code-name": "cilantroLime",
+                    "abbreviation": "Cil Lim",
+                    "isSauce": true,
+                    "image-name": "",
+                    "color-code": "rgb(50, 127, 9)"
+                },
+                {
+                    "name": "Blue Poke",
+                    "code-name": "bluePoke",
+                    "abbreviation": "BP",
+                    "isSauce": true,
+                    "image-name": "",
+                    "color-code": "rgb(100, 52, 0)"
+                }
+            ],
+            "len": 2
+        },
+        {
+            "name": "Octopus",
+            "code-name": "octopus",
+            "image-name": "",
+            "color-code": "rgb(125, 51, 74)",
+            "len": 1
+        },
+        {
+            "name": "Yellowtail",
+            "code-name": "yellowtail",
+            "image-name": "",
+            "color-code": "rgb(191, 147, 131)",
+            "len": 1
+        },
+        {
+            "name": "Shrimp",
+            "code-name": "shrimp",
+            "image-name": "",
+            "color-code": "rgb(240, 150, 184)",
+            "len": 1
+        },
+        {
+            "name": "divider",
+            "len": 0
+        },
+        {
+            "name": "Ahi Tuna",
+            "code-name": "ahiTuna",
+            "image-name": "",
+            "color-code": "rgb(125, 51, 74)",
+            "len": 2
+        },
+        {
+            "name": "",
+            "len": 1
+        },
+        {
+            "name": "Cucumber",
+            "code-name": "cucumber",
+            "class-name": "cucumber-cartoon",
+            "image-name": "",
+            "color-code": "rgb(58, 132, 58)",
+            "len": 2
+        },
+        {
+            "name": "Edamame",
+            "code-name": "edamame",
+            "image-name": "edamame-background.png",
+            "color-code": "rgb(97, 178, 97)",
+            "len": 2
+        },
+        {
+            "name": "Quinoa",
+            "code-name": "quinoa",
+            "image-name": "",
+            "color-code": "rgb(158, 147, 80)",
+            "len": 2
+        },
+        {
+            "name": "divider",
+            "len": 0
+        },
+        {
+            "name": "Mixed Greens",
+            "code-name": "mixedGreens",
+            "image-name": "",
+            "color-code": "green",
+            "len": 2
+        }        
+    ],
+    [
+        {
+            "name": "Seaweed Flakes",
+            "code-name": "seaweedFlakes",
+            "class-name": "flakes-cartoon",
+            "image-name": "",
+            "color-code": "rgb(5, 49, 0)",
+            "len": 1
+        },
+        {
+            "items": [
+                {
+                    "name": "Sesame Seeds",
+                    "code-name": "sesameSeeds",
+                    "class-name": "seeds-cartoon",
+                    "abbreviation": "Seeds",
+                    "isSauce": false,
+                    "image-name": "",
+                    "color-code": "black"
+                },
+                {
+                    "name": "Sesame Oil",
+                    "code-name": "sesameOil",
+                    "abbreviation": "Oil",
+                    "isSauce": true,
+                    "image-name": "",
+                    "color-code": "rgb(48, 34, 0)"
+                }
+            ],
+            "len": 1
+        },
+        {
+            "name": "divider",
+            "len": 0
+        },
+        {
+            "name": "Cilantro",
+            "code-name": "cilantro",
+            "image-name": "",
+            "color-code": "rgb(50, 127, 9)",
+            "len": 1
+        },
+        {
+            "name": "Green Onions",
+            "code-name": "greenOnion",
+            "image-name": "",
+            "color-code": "rgb(58, 132, 58)",
+            "len": 2
+        },
+        {
+            "name": "Masago",
+            "code-name": "masago",
+            "image-name": "",
+            "color-code": "rgb(202, 111, 0)",
+            "len": 1
+        },
+        {
+            "name": "Seaweed Salad",
+            "code-name": "seaweedSalad",
+            "image-name": "",
+            "color-code": "green",
+            "len": 2
+        },
+        {
+            "name": "Grilled Salmon",
+            "code-name": "grilledSalmon",
+            "image-name": "",
+            "color-code": "rgb(200, 132, 113)",
+            "len": 1
+        },
+        {
+            "name": "Spicy Tuna",
+            "code-name": "spicyTuna",
+            "image-name": "",
+            "color-code": "rgb(147, 46, 46)",
+            "len": 2
+        },
+        {
+            "name": "divider",
+            "len": 0
+        },
+        {
+            "name": "Salmon",
+            "code-name": "salmon",
+            "class-name": "salmon-cartoon",
+            "image-name": "salmon.png",
+            "color-code": "rgb(200, 132, 113)",
+            "len": 2
+        },
+        {
+            "name": "",
+            "len": 1
+        },
+        {
+            "name": "Krab Salad",
+            "code-name": "krab",
+            "image-name": "",
+            "color-code": "rgb(255, 159, 193)",
+            "len": 2
+        },
+        {
+            "name": "Avocado",
+            "code-name": "avocado",
+            "color-code": "rgb(50, 127, 9)",
+            "image-name": "avocado-slice-background.png",
+            "len": 2
+        },
+        {
+            "name": "Spicy Krab Salad",
+            "code-name": "spicyKrab",
+            "image-name": "",
+            "color-code": "rgb(161, 113, 41)",
+            "len": 2
+        },
+        {
+            "name": "divider",
+            "len": 0
+        },
+        {
+            "name": "",
+            "len": 1
+        },
+        {
+            "name": "Wonton Crisps",
+            "code-name": "wontonBase",
+            "image-name": "",
+            "color-code": "rgb(175, 137, 0)",
+            "len": 1
+        }
+    ]
+]
