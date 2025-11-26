@@ -396,6 +396,7 @@
 	const check = (foodName: string) => {
 		isSelected[foodName] = (isSelected[foodName] + 1) % 2;
 	};
+	goToTestPage();
 </script>
 
 
