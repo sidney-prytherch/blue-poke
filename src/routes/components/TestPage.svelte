@@ -696,7 +696,7 @@
 		left: 90%;
 		top: 0;
 		z-index: 99;
-		background-image: url('assets/action icon.png');
+		background-image: url('/blue-poke/assets/action icon.png');
 		background-size: 100% auto;
 	}
 
@@ -904,12 +904,12 @@
 
 	.cursor,
 	.cursor button {
-		cursor: url('assets/gloveless cursor.png'), auto;
+		cursor: url('/blue-poke/assets/gloveless cursor.png'), auto;
 	}
 
 	.gloved-cursor,
 	.gloved-cursor button {
-		cursor: url('assets/gloved cursor.png'), auto;
+		cursor: url('/blue-poke/assets/gloved cursor.png'), auto;
 	}
 
 	.white-rice-cartoon {
@@ -1152,7 +1152,7 @@
 		flex-direction: row-reverse;
 		display: flex;
 		top: 0;
-		background: url('/blue-poke/assets/long table down.png');
+		background: url('/assets/long table down.png');
 		background-size: auto 100%;
 		box-shadow: 3px 5px 5px black;
 	}
