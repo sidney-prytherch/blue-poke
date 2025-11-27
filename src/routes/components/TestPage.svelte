@@ -696,7 +696,7 @@
 		left: 90%;
 		top: 0;
 		z-index: 99;
-		background-image: url('$img/action icon.png');
+		background-image: url('$img/napkins.png');
 		background-size: 100% auto;
 	}
 
