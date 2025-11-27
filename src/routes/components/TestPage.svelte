@@ -696,7 +696,7 @@
 		left: 90%;
 		top: 0;
 		z-index: 99;
-		background-image: url('/blue-poke/assets/napkins.png');
+		background-image: url('$img/napkins.png');
 		background-size: 100% auto;
 	}
 
@@ -755,7 +755,7 @@
 		height: 85vh;
 		width: 100vw;
 		padding-bottom: 30px;
-		background: url('$imglong table down small.png') repeat-x;
+		background: url('$img/long table down small.png') repeat-x;
 		background-size: auto 100%;
 	}
 

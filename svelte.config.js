@@ -17,7 +17,7 @@ const config = {
             base: dev ? '' : '/blue-poke'
         },
         alias: {
-            $img: dev ? 'assets/' : '/blue-poke/assets/'
+            $img: dev ? 'assets' : '/blue-poke/assets'
         }
     },
     preprocess: vitePreprocess(),
