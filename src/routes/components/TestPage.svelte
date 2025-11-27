@@ -954,7 +954,7 @@
 		position: relative;
 		height: 100%;
 		aspect-ratio: 1;
-		background: url('$img/metal bowl.png') no-repeat;
+		background: url('$img/metal bowl small.png') no-repeat;
 		background-size: 100% auto;
 	}
 
@@ -962,7 +962,7 @@
 		position: relative;
 		height: 100%;
 		aspect-ratio: 1;
-		background: url('$img/plastic bowl.png') no-repeat;
+		background: url('$img/plastic bowl small.png') no-repeat;
 		background-size: 100% auto;
 		z-index: 4;
 	}
@@ -996,7 +996,7 @@
 		width: auto; /* 24 * 19/33 */
 		z-index: 1;
 		aspect-ratio: 1 / 1;
-		background: url('$img/soy container.png');
+		background: url('$img/soy container small.png');
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 	}
@@ -1007,7 +1007,7 @@
 		width: auto; /* 24 * 19/33 */
 		z-index: 1;
 		aspect-ratio: 19 / 33;
-		background: url('$img/small bag.png');
+		background: url('$img/small bag small.png');
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 	}
@@ -1018,7 +1018,7 @@
 		width: auto; /* 24 * 19/33 */
 		z-index: 1;
 		aspect-ratio: 19 / 33;
-		background: url('$img/large bag.png');
+		background: url('$img/large bag small.png');
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 	}
@@ -1040,7 +1040,7 @@
 		width: auto;
 		z-index: 1;
 		aspect-ratio: 7 / 4;
-		background: url('$img/napkins.png');
+		background: url('$img/napkins small.png');
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 	}
@@ -1136,7 +1136,7 @@
 		padding: 0;
 		margin: 0;
 		position: absolute;
-		background: url('$img/tile.png');
+		background: url('$img/tile small.png');
 		background-size: 120px 120px;
 		overflow: hidden;
 	}
@@ -1152,7 +1152,7 @@
 		flex-direction: row-reverse;
 		display: flex;
 		top: 0;
-		background: url('/assets/long table down.png');
+		background: url('/assets/long table down small.png');
 		background-size: auto 100%;
 		box-shadow: 3px 5px 5px black;
 	}
@@ -1162,7 +1162,7 @@
 		width: 70vw;
 		bottom: 0;
 		position: absolute;
-		background: url('$img/long table up.png');
+		background: url('$img/long table up small.png');
 		background-size: auto 100%;
 		box-shadow: 3px -1px 5px black;
 		align-items: center;
@@ -1173,7 +1173,7 @@
 		position: absolute;
 		right: 0;
 		top: 30vh;
-		background: url('$img/long table left.png') 0 0 repeat;
+		background: url('$img/long table left small.png') 0 0 repeat;
 		width: 15vw;
 		height: 45vh;
 		align-items: center;
@@ -1194,7 +1194,7 @@
 		max-width: 50%;
 		width: auto;
 		height: 100%;
-		background: url('$img/metal bowl.png') no-repeat;
+		background: url('$img/metal bowl small.png') no-repeat;
 		background-size: 100% auto;
 	}
 
@@ -1203,7 +1203,7 @@
 		width: auto;
 		max-width: 50%;
 		height: 100%;
-		background: url('$img/plastic bowl.png') no-repeat;
+		background: url('$img/plastic bowl small.png') no-repeat;
 		background-size: 100% auto;
 	}
 
