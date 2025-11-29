@@ -696,7 +696,7 @@
 		left: 90%;
 		top: 0;
 		z-index: 99;
-		background-image: url('$img/napkins.png');
+		background-image: url('assets/action icon.png');
 		background-size: 100% auto;
 	}
 
@@ -755,7 +755,7 @@
 		height: 85vh;
 		width: 100vw;
 		padding-bottom: 30px;
-		background: url('$img/long table down small.png') repeat-x;
+		background: url('/blue-poke/assets/long table down.png') repeat-x;
 		background-size: auto 100%;
 	}
 
@@ -790,7 +790,7 @@
 		/* min-height: 33%; */
 		aspect-ratio: 40 / 33;
 		margin: 0px 8px 0px 8px;
-		background: url('$img/cutting board.png') no-repeat;
+		background: url('/blue-poke/assets/cutting board.png') no-repeat;
 		background-size: auto 100%;
 	}
 
@@ -798,7 +798,7 @@
 		height: auto;
 		aspect-ratio: 19 / 15;
 		margin: 16px;
-		background: url('$img/tacobox.png') no-repeat;
+		background: url('/blue-poke/assets/tacobox.png') no-repeat;
 		background-size: 100% 100%;
 	}
 
@@ -806,7 +806,7 @@
 		height: auto;
 		aspect-ratio: 23 / 15;
 		max-width: 25vw !important;
-		background: url('$img/taco stand.png') no-repeat;
+		background: url('/blue-poke/assets/taco stand.png') no-repeat;
 		background-size: 100% 100%;
 	}
 
@@ -824,7 +824,7 @@
 		height: 100%;
 		width: 100%;
 		position: absolute;
-		background: url('$img/tacos.png') no-repeat;
+		background: url('/blue-poke/assets/tacos.png') no-repeat;
 		background-size: 100% 100%;
 	}
 
@@ -833,49 +833,49 @@
 		width: 100%;
 		position: absolute;
 		top: 0;
-		background: url('$img/taco chipotle line.png') no-repeat;
+		background: url('/blue-poke/assets/taco chipotle line.png') no-repeat;
 		background-size: 100% 100%;
 	}
 	.taco-chipotle-squiggle {
 		height: 100%;
 		width: 100%;
 		position: relative;
-		background: url('$img/taco chipotle squiggle.png') no-repeat;
+		background: url('/blue-poke/assets/taco chipotle squiggle.png') no-repeat;
 		background-size: 100% 100%;
 	}
 	.taco-coleslaw {
 		height: 100%;
 		width: 100%;
 		position: absolute;
-		background: url('$img/taco coleslaw.png') no-repeat;
+		background: url('/blue-poke/assets/taco coleslaw.png') no-repeat;
 		background-size: 100% 100%;
 	}
 	.taco-green-onion {
 		height: 100%;
 		width: 100%;
 		position: absolute;
-		background: url('$img/taco green onion.png') no-repeat;
+		background: url('/blue-poke/assets/taco green onion.png') no-repeat;
 		background-size: 100% 100%;
 	}
 	.taco-sesame-seeds {
 		height: 100%;
 		width: 100%;
 		position: absolute;
-		background: url('$img/taco sesame seeds.png') no-repeat;
+		background: url('/blue-poke/assets/taco sesame seeds.png') no-repeat;
 		background-size: 100% 100%;
 	}
 	.taco-salmon {
 		height: 100%;
 		width: 100%;
 		position: absolute;
-		background: url('$img/taco salmon.png') no-repeat;
+		background: url('/blue-poke/assets/taco salmon.png') no-repeat;
 		background-size: 100% 100%;
 	}
 	.taco-avocado {
 		height: 100%;
 		width: 100%;
 		position: absolute;
-		background: url('$img/taco avocado.png') no-repeat;
+		background: url('/blue-poke/assets/taco avocado.png') no-repeat;
 		background-size: 100% 100%;
 	}
 
@@ -904,34 +904,34 @@
 
 	.cursor,
 	.cursor button {
-		cursor: url('$img/gloveless cursor.png'), auto;
+		cursor: url('assets/gloveless cursor.png'), auto;
 	}
 
 	.gloved-cursor,
 	.gloved-cursor button {
-		cursor: url('$img/gloved cursor.png'), auto;
+		cursor: url('assets/gloved cursor.png'), auto;
 	}
 
 	.white-rice-cartoon {
-		background: url('$img/rice cartoon.png') no-repeat;
+		background: url('/blue-poke/assets/rice cartoon.png') no-repeat;
 	}
 	.mango-cartoon {
-		background: url('$img/mango cartoon.png') no-repeat;
+		background: url('/blue-poke/assets/mango cartoon.png') no-repeat;
 	}
 	.seeds-cartoon {
-		background: url('$img/seeds cartoon.png') no-repeat;
+		background: url('/blue-poke/assets/seeds cartoon.png') no-repeat;
 	}
 	.salmon-cartoon {
-		background: url('$img/salmon cartoon.png') no-repeat;
+		background: url('/blue-poke/assets/salmon cartoon.png') no-repeat;
 	}
 	.flakes-cartoon {
-		background: url('$img/flakes cartoon.png') no-repeat;
+		background: url('/blue-poke/assets/flakes cartoon.png') no-repeat;
 	}
 	.cucumber-cartoon {
-		background: url('$img/cucumber cartoon.png') no-repeat;
+		background: url('/blue-poke/assets/cucumber cartoon.png') no-repeat;
 	}
 	.plastic-bowl-lid {
-		background: url('$img/plastic bowl lid.png') no-repeat;
+		background: url('/blue-poke/assets/plastic bowl lid.png') no-repeat;
 	}
 
 	.white-rice-cartoon,
@@ -954,7 +954,7 @@
 		position: relative;
 		height: 100%;
 		aspect-ratio: 1;
-		background: url('$img/metal bowl small.png') no-repeat;
+		background: url('/blue-poke/assets/metal bowl.png') no-repeat;
 		background-size: 100% auto;
 	}
 
@@ -962,7 +962,7 @@
 		position: relative;
 		height: 100%;
 		aspect-ratio: 1;
-		background: url('$img/plastic bowl small.png') no-repeat;
+		background: url('/blue-poke/assets/plastic bowl.png') no-repeat;
 		background-size: 100% auto;
 		z-index: 4;
 	}
@@ -996,7 +996,7 @@
 		width: auto; /* 24 * 19/33 */
 		z-index: 1;
 		aspect-ratio: 1 / 1;
-		background: url('$img/soy container small.png');
+		background: url('/blue-poke/assets/soy container.png');
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 	}
@@ -1007,7 +1007,7 @@
 		width: auto; /* 24 * 19/33 */
 		z-index: 1;
 		aspect-ratio: 19 / 33;
-		background: url('$img/small bag small.png');
+		background: url('/blue-poke/assets/small bag.png');
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 	}
@@ -1018,7 +1018,7 @@
 		width: auto; /* 24 * 19/33 */
 		z-index: 1;
 		aspect-ratio: 19 / 33;
-		background: url('$img/large bag small.png');
+		background: url('/blue-poke/assets/large bag.png');
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 	}
@@ -1030,7 +1030,7 @@
 		z-index: -1;
 		height: 100vh;
 		width: 100vw;
-		background: url('$img/floor light.png');
+		background: url('/blue-poke/assets/floor light.png');
 		opacity: 60%;
 		background-size: 100vw 100vh;
 	}
@@ -1040,7 +1040,7 @@
 		width: auto;
 		z-index: 1;
 		aspect-ratio: 7 / 4;
-		background: url('$img/napkins small.png');
+		background: url('/blue-poke/assets/napkins.png');
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 	}
@@ -1136,7 +1136,7 @@
 		padding: 0;
 		margin: 0;
 		position: absolute;
-		background: url('$img/tile small.png');
+		background: url('/blue-poke/assets/tile.png');
 		background-size: 120px 120px;
 		overflow: hidden;
 	}
@@ -1152,7 +1152,7 @@
 		flex-direction: row-reverse;
 		display: flex;
 		top: 0;
-		background: url('/assets/long table down small.png');
+		background: url('/blue-poke/assets/long table down.png');
 		background-size: auto 100%;
 		box-shadow: 3px 5px 5px black;
 	}
@@ -1162,7 +1162,7 @@
 		width: 70vw;
 		bottom: 0;
 		position: absolute;
-		background: url('$img/long table up small.png');
+		background: url('/blue-poke/assets/long table up.png');
 		background-size: auto 100%;
 		box-shadow: 3px -1px 5px black;
 		align-items: center;
@@ -1173,7 +1173,7 @@
 		position: absolute;
 		right: 0;
 		top: 30vh;
-		background: url('$img/long table left small.png') 0 0 repeat;
+		background: url('/blue-poke/assets/long table left.png') 0 0 repeat;
 		width: 15vw;
 		height: 45vh;
 		align-items: center;
@@ -1194,7 +1194,7 @@
 		max-width: 50%;
 		width: auto;
 		height: 100%;
-		background: url('$img/metal bowl small.png') no-repeat;
+		background: url('/blue-poke/assets/metal bowl.png') no-repeat;
 		background-size: 100% auto;
 	}
 
@@ -1203,7 +1203,7 @@
 		width: auto;
 		max-width: 50%;
 		height: 100%;
-		background: url('$img/plastic bowl small.png') no-repeat;
+		background: url('/blue-poke/assets/plastic bowl.png') no-repeat;
 		background-size: 100% auto;
 	}
 

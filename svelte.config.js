@@ -14,10 +14,7 @@ const config = {
             fallback: null
         }),
         paths: {
-            base: dev ? '' : '/blue-poke'
-        },
-        alias: {
-            $img: dev ? 'assets' : '/blue-poke/assets'
+            base: dev ? '' : '/blue-poke',
         }
     },
     preprocess: vitePreprocess(),
