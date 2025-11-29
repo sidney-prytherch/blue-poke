@@ -400,7 +400,7 @@
             "name": "Salmon",
             "code-name": "salmon",
             "class-name": "salmon-cartoon",
-            "image-name": "salmon small.png",
+            "image-name": "salmon%20small.png",
             "color-code": "rgb(200, 132, 113)",
             "len": 2
         },
