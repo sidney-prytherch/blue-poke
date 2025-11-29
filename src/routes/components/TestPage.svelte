@@ -132,7 +132,7 @@
 		| 'cucumber-cartoon';
 	function addItemToHand(item: HandItems | string) {
 		if (
-			!handItemCheck('nothing') && 
+			!handItemCheck('nothing') &&
 			item.length > 0 &&
 			(itemsInBowl.length === 0 || itemsInBowl[itemsInBowl.length - 1] !== 'plastic-bowl-lid') &&
 			(item !== 'plastic-bowl-lid' || handItemCheck('plastic'))
@@ -326,7 +326,7 @@
 			{ action: 'throw away contents', function: throwAwayBowl },
 			{
 				action: 'throw away bowl',
-				function: removeBowlFromHand,
+				function: removeBowlFromHand
 			},
 			{
 				action: 'cover with lid',
@@ -353,11 +353,11 @@
 			{ action: 'put bowl in bagging area', function: placeBowlInBaggingArea }
 		],
 		tacobox: [
-			{ 
-				action: 'place taco shells in taco shell holder', 
-				function: () => {},// {placeItemOnTacoHolder('taco-shell')},
+			{
+				action: 'place taco shells in taco shell holder',
+				function: () => {}, // {placeItemOnTacoHolder('taco-shell')},
 				actionAppearanceCondition: () => {
-					return prepTableItems.tools.some(it => it === "taco-stand")
+					return prepTableItems.tools.some((it) => it === 'taco-stand');
 				}
 			}
 		]
@@ -412,6 +412,63 @@
 	class:gloved-cursor={isWearingGlove}
 	class:cursor={!isWearingGlove}
 	class:workspace-floor={currentArea === 'workspace'}
+	style={`
+		--action_icon: url(assets/action%20icon.png);\
+		--avocado-slice-background: url(assets/avocado-slice-background.png);\
+		--coleslaw: url(assets/coleslaw.png);\
+		--cucumber_cartoon: url(assets/cucumber%20cartoon.png);\
+		--cursor_glove: url(assets/cursor%20glove.png);\
+		--cursor: url(assets/cursor.png);\
+		--cutting_board: url(assets/cutting%20board.png);\
+		--edamame-background: url(assets/edamame-background.png);\
+		--flakes_cartoon: url(assets/flakes%20cartoon.png);\
+		--floor_light: url(assets/floor%20light.png);\
+		--floor_light2: url(assets/floor%20light2.png);\
+		--gloved_cursor: url(assets/gloved%20cursor.png);\
+		--gloveless_cursor: url(assets/gloveless%20cursor.png);\
+		--large_bag_small: url(assets/large%20bag%20small.png);\
+		--large_bag: url(assets/large%20bag.png);\
+		--long_table_down_small: url(assets/long%20table%20down%20small.png);\
+		--long_table_down: url(assets/long%20table%20down.png);\
+		--long_table_left_small: url(assets/long%20table%20left%20small.png);\
+		--long_table_left: url(assets/long%20table%20left.png);\
+		--long_table_right_small: url(assets/long%20table%20right%20small.png);\
+		--long_table_right: url(assets/long%20table%20right.png);\
+		--long_table_up_small: url(assets/long%20table%20up%20small.png);\
+		--long_table_up: url(assets/long%20table%20up.png);\
+		--mango_cartoon: url(assets/mango%20cartoon.png);\
+		--metal_bowl_small: url(assets/metal%20bowl%20small.png);\
+		--metal_bowl: url(assets/metal%20bowl.png);\
+		--metal_table: url(assets/metal%20table.png);\
+		--napkins_small: url(assets/napkins%20small.png);\
+		--napkins: url(assets/napkins.png);\
+		--plastic_bowl_lid_small: url(assets/plastic%20bowl%20lid%20small.png);\
+		--plastic_bowl_lid: url(assets/plastic%20bowl%20lid.png);\
+		--plastic_bowl_small: url(assets/plastic%20bowl%20small.png);\
+		--plastic_bowl: url(assets/plastic%20bowl.png);\
+		--platic_bowl_lid: url(assets/platic%20bowl%20lid.png);\
+		--rice_cartoon: url(assets/rice%20cartoon.png);\
+		--salmon_cartoon: url(assets/salmon%20cartoon.png);\
+		--salmon_small: url(assets/salmon%20small.png);\
+		--salmon: url(assets/salmon.png);\
+		--seeds_cartoon: url(assets/seeds%20cartoon.png);\
+		--small_bag_small: url(assets/small%20bag%20small.png);\
+		--small_bag: url(assets/small%20bag.png);\
+		--soy_container_small: url(assets/soy%20container%20small.png);\
+		--soy_container: url(assets/soy%20container.png);\
+		--taco_avocado: url(assets/taco%20avocado.png);\
+		--taco_chipotle_line: url(assets/taco%20chipotle%20line.png);\
+		--taco_chipotle_squiggle: url(assets/taco%20chipotle%20squiggle.png);\
+		--taco_coleslaw: url(assets/taco%20coleslaw.png);\
+		--taco_green_onion: url(assets/taco%20green%20onion.png);\
+		--taco_salmon: url(assets/taco%20salmon.png);\
+		--taco_sesame_seeds: url(assets/taco%20sesame%20seeds.png);\
+		--taco_stand: url(assets/taco%20stand.png);\
+		--tacobox: url(assets/tacobox.png);\
+		--tacos: url(assets/tacos.png);\
+		--tile_small: url(assets/tile%20small.png);\
+		--tile: url(assets/tile.png);\
+		`}
 >
 	<div class="floorshading"></div>
 	<div class="ticket-container">
@@ -450,9 +507,7 @@
 			onmouseleave={hideActions}
 		>
 			{#each currentArea === 'line' ? actions.line : actions.prepArea as action}
-				<button
-					onclick={action.function}>{action.action}</button
-				>
+				<button onclick={action.function}>{action.action}</button>
 			{/each}
 		</div>
 		<div
@@ -696,7 +751,7 @@
 		left: 90%;
 		top: 0;
 		z-index: 99;
-		background-image: url('/blue-poke/assets/action icon.png');
+		background-image: var(--action_icon);
 		background-size: 100% auto;
 	}
 
@@ -791,7 +846,7 @@
 		/* min-height: 33%; */
 		aspect-ratio: 40 / 33;
 		margin: 0px 8px 0px 8px;
-		background: url('/blue-poke/assets/cutting board.png') no-repeat;
+		background: var(--cutting_board) no-repeat;
 		background-size: auto 100%;
 	}
 
@@ -799,7 +854,7 @@
 		height: auto;
 		aspect-ratio: 19 / 15;
 		margin: 16px;
-		background: url('/blue-poke/assets/tacobox.png') no-repeat;
+		background: var(--tacobox) no-repeat;
 		background-size: 100% 100%;
 	}
 
@@ -807,7 +862,7 @@
 		height: auto;
 		aspect-ratio: 23 / 15;
 		max-width: 25vw !important;
-		background: url('/blue-poke/assets/taco stand.png') no-repeat;
+		background: var(--taco_stand) no-repeat;
 		background-size: 100% 100%;
 	}
 
@@ -825,7 +880,7 @@
 		height: 100%;
 		width: 100%;
 		position: absolute;
-		background: url('/blue-poke/assets/tacos.png') no-repeat;
+		background: var(--tacos) no-repeat;
 		background-size: 100% 100%;
 	}
 
@@ -834,49 +889,49 @@
 		width: 100%;
 		position: absolute;
 		top: 0;
-		background: url('/blue-poke/assets/taco chipotle line.png') no-repeat;
+		background: var(--taco_chipotle_line) no-repeat;
 		background-size: 100% 100%;
 	}
 	.taco-chipotle-squiggle {
 		height: 100%;
 		width: 100%;
 		position: relative;
-		background: url('/blue-poke/assets/taco chipotle squiggle.png') no-repeat;
+		background: var(--taco_chipotle_squiggle) no-repeat;
 		background-size: 100% 100%;
 	}
 	.taco-coleslaw {
 		height: 100%;
 		width: 100%;
 		position: absolute;
-		background: url('/blue-poke/assets/taco coleslaw.png') no-repeat;
+		background: var(--taco_coleslaw) no-repeat;
 		background-size: 100% 100%;
 	}
 	.taco-green-onion {
 		height: 100%;
 		width: 100%;
 		position: absolute;
-		background: url('/blue-poke/assets/taco green onion.png') no-repeat;
+		background: var(--taco_green_onion) no-repeat;
 		background-size: 100% 100%;
 	}
 	.taco-sesame-seeds {
 		height: 100%;
 		width: 100%;
 		position: absolute;
-		background: url('/blue-poke/assets/taco sesame seeds.png') no-repeat;
+		background: var(--taco_sesame_seeds) no-repeat;
 		background-size: 100% 100%;
 	}
 	.taco-salmon {
 		height: 100%;
 		width: 100%;
 		position: absolute;
-		background: url('/blue-poke/assets/taco salmon.png') no-repeat;
+		background: var(--taco_salmon) no-repeat;
 		background-size: 100% 100%;
 	}
 	.taco-avocado {
 		height: 100%;
 		width: 100%;
 		position: absolute;
-		background: url('/blue-poke/assets/taco avocado.png') no-repeat;
+		background: var(--taco_avocado) no-repeat;
 		background-size: 100% 100%;
 	}
 
@@ -905,34 +960,34 @@
 
 	.cursor,
 	.cursor button {
-		cursor: url('/blue-poke/assets/gloveless cursor.png'), auto;
+		cursor: var(--gloveless_cursor), auto;
 	}
 
 	.gloved-cursor,
 	.gloved-cursor button {
-		cursor: url('/blue-poke/assets/gloved cursor.png'), auto;
+		cursor: var(--gloved_cursor), auto;
 	}
 
 	.white-rice-cartoon {
-		background: url('/blue-poke/assets/rice cartoon.png') no-repeat;
+		background: var(--rice_cartoon) no-repeat;
 	}
 	.mango-cartoon {
-		background: url('/blue-poke/assets/mango cartoon.png') no-repeat;
+		background: var(--mango_cartoon) no-repeat;
 	}
 	.seeds-cartoon {
-		background: url('/blue-poke/assets/seeds cartoon.png') no-repeat;
+		background: var(--seeds_cartoon) no-repeat;
 	}
 	.salmon-cartoon {
-		background: url('/blue-poke/assets/salmon cartoon.png') no-repeat;
+		background: var(--salmon_cartoon) no-repeat;
 	}
 	.flakes-cartoon {
-		background: url('/blue-poke/assets/flakes cartoon.png') no-repeat;
+		background: var(--flakes_cartoon) no-repeat;
 	}
 	.cucumber-cartoon {
-		background: url('/blue-poke/assets/cucumber cartoon.png') no-repeat;
+		background: var(--cucumber_cartoon) no-repeat;
 	}
 	.plastic-bowl-lid {
-		background: url('/blue-poke/assets/plastic bowl lid small.png') no-repeat;
+		background: var(--plastic_bowl_lid_small) no-repeat;
 	}
 
 	.white-rice-cartoon,
@@ -955,7 +1010,7 @@
 		position: relative;
 		height: 100%;
 		aspect-ratio: 1;
-		background: url('/blue-poke/assets/metal bowl small.png') no-repeat;
+		background: var(--metal_bowl_small) no-repeat;
 		background-size: 100% auto;
 	}
 
@@ -963,7 +1018,7 @@
 		position: relative;
 		height: 100%;
 		aspect-ratio: 1;
-		background: url('/blue-poke/assets/plastic bowl small.png') no-repeat;
+		background: var(--plastic_bowl_small) no-repeat;
 		background-size: 100% auto;
 		z-index: 4;
 	}
@@ -997,7 +1052,7 @@
 		width: auto; /* 24 * 19/33 */
 		z-index: 1;
 		aspect-ratio: 1 / 1;
-		background: url('/blue-poke/assets/soy container small.png');
+		background: var(--soy_container_small);
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 	}
@@ -1008,7 +1063,7 @@
 		width: auto; /* 24 * 19/33 */
 		z-index: 1;
 		aspect-ratio: 19 / 33;
-		background: url('/blue-poke/assets/small bag small.png');
+		background: var(--small_bag_small);
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 	}
@@ -1019,7 +1074,7 @@
 		width: auto; /* 24 * 19/33 */
 		z-index: 1;
 		aspect-ratio: 19 / 33;
-		background: url('/blue-poke/assets/large bag small.png');
+		background: var(--large_bag_small);
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 	}
@@ -1031,7 +1086,7 @@
 		z-index: -1;
 		height: 100vh;
 		width: 100vw;
-		background: url('/blue-poke/assets/floor light.png');
+		background: var(--floor_light);
 		opacity: 60%;
 		background-size: 100vw 100vh;
 	}
@@ -1041,7 +1096,7 @@
 		width: auto;
 		z-index: 1;
 		aspect-ratio: 7 / 4;
-		background: url('/blue-poke/assets/napkins small.png');
+		background: var(--napkins_small);
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 	}
@@ -1049,11 +1104,11 @@
 	.ticket-container {
 		position: absolute;
 	}
-	
+
 	.action-container {
 		position: absolute;
 	}
-	
+
 	.ticket-hover {
 		position: absolute;
 		height: fit-content;
@@ -1137,7 +1192,7 @@
 		padding: 0;
 		margin: 0;
 		position: absolute;
-		background: url('/blue-poke/assets/tile.png');
+		background: var(--tile);
 		background-size: 120px 120px;
 		overflow: hidden;
 	}
@@ -1153,7 +1208,7 @@
 		flex-direction: row-reverse;
 		display: flex;
 		top: 0;
-		background: url('/blue-poke/assets/long table down small.png');
+		background: var(--long_table_down_small);
 		background-size: auto 100%;
 		box-shadow: 3px 5px 5px black;
 	}
@@ -1163,7 +1218,7 @@
 		width: 70vw;
 		bottom: 0;
 		position: absolute;
-		background: url('/blue-poke/assets/long table up small.png');
+		background: var(--long_table_up_small);
 		background-size: auto 100%;
 		box-shadow: 3px -1px 5px black;
 		align-items: center;
@@ -1174,7 +1229,7 @@
 		position: absolute;
 		right: 0;
 		top: 30vh;
-		background: url('/blue-poke/assets/long table left small.png') 0 0 repeat;
+		background: var(--long_table_left_small) 0 0 repeat;
 		width: 15vw;
 		height: 45vh;
 		align-items: center;
@@ -1195,7 +1250,7 @@
 		max-width: 50%;
 		width: auto;
 		height: 100%;
-		background: url('/blue-poke/assets/metal bowl small.png') no-repeat;
+		background: var(--metal_bowl_small) no-repeat;
 		background-size: 100% auto;
 	}
 
@@ -1204,7 +1259,7 @@
 		width: auto;
 		max-width: 50%;
 		height: 100%;
-		background: url('/blue-poke/assets/plastic bowl small.png') no-repeat;
+		background: var(--plastic_bowl_small) no-repeat;
 		background-size: 100% auto;
 	}
 
