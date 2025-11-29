@@ -696,7 +696,7 @@
 		left: 90%;
 		top: 0;
 		z-index: 99;
-		background-image: url('assets/action icon.png');
+		background-image: url('/blue-poke/assets/action icon.png');
 		background-size: 100% auto;
 	}
 
@@ -904,12 +904,12 @@
 
 	.cursor,
 	.cursor button {
-		cursor: url('assets/gloveless cursor.png'), auto;
+		cursor: url('/blue-poke/assets/gloveless cursor.png'), auto;
 	}
 
 	.gloved-cursor,
 	.gloved-cursor button {
-		cursor: url('assets/gloved cursor.png'), auto;
+		cursor: url('/blue-poke/assets/gloved cursor.png'), auto;
 	}
 
 	.white-rice-cartoon {
