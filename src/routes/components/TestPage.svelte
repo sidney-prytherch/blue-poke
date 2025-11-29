@@ -755,7 +755,7 @@
 		height: 85vh;
 		width: 100vw;
 		padding-bottom: 30px;
-		background: url('/blue-poke/assets/long table down small.png') repeat-x;
+		background: url('assets/long table down.png') repeat-x;
 		background-size: auto 100%;
 	}
 
