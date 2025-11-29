@@ -2,6 +2,59 @@
 	import lineLayout from './lineLayoutTrue.json';
 	import napkins from '$lib/assets/napkins.png';
 	import napkins_small from '$lib/assets/napkins small.png';
+	import action_icon from '$lib/assets/action icon.png';
+	import avocado_slice_background from '$lib/assets/avocado slice background.png';
+	import coleslaw from '$lib/assets/coleslaw.png';
+	import cucumber_cartoon from '$lib/assets/cucumber cartoon.png';
+	import cursor_glove from '$lib/assets/cursor glove.png';
+	import cursor from '$lib/assets/cursor.png';
+	import cutting_board from '$lib/assets/cutting board.png';
+	import edamame_background from '$lib/assets/edamame background.png';
+	import flakes_cartoon from '$lib/assets/flakes cartoon.png';
+	import floor_light from '$lib/assets/floor light.png';
+	import floor_light2 from '$lib/assets/floor light2.png';
+	import gloved_cursor from '$lib/assets/gloved cursor.png';
+	import gloveless_cursor from '$lib/assets/gloveless cursor.png';
+	import large_bag_small from '$lib/assets/large bag small.png';
+	import large_bag from '$lib/assets/large bag.png';
+	import long_table_down_small from '$lib/assets/long table down small.png';
+	import long_table_down from '$lib/assets/long table down.png';
+	import long_table_left_small from '$lib/assets/long table left small.png';
+	import long_table_left from '$lib/assets/long table left.png';
+	import long_table_right_small from '$lib/assets/long table right small.png';
+	import long_table_right from '$lib/assets/long table right.png';
+	import long_table_up_small from '$lib/assets/long table up small.png';
+	import long_table_up from '$lib/assets/long table up.png';
+	import mango_cartoon from '$lib/assets/mango cartoon.png';
+	import metal_bowl_small from '$lib/assets/metal bowl small.png';
+	import metal_bowl from '$lib/assets/metal bowl.png';
+	import metal_table from '$lib/assets/metal table.png';
+	import plastic_bowl_lid_small from '$lib/assets/plastic bowl lid small.png';
+	import plastic_bowl_lid from '$lib/assets/plastic bowl lid.png';
+	import plastic_bowl_small from '$lib/assets/plastic bowl small.png';
+	import plastic_bowl from '$lib/assets/plastic bowl.png';
+	import platic_bowl_lid from '$lib/assets/platic bowl lid.png';
+	import rice_cartoon from '$lib/assets/rice cartoon.png';
+	import salmon_cartoon from '$lib/assets/salmon cartoon.png';
+	import salmon_small from '$lib/assets/salmon small.png';
+	import salmon from '$lib/assets/salmon.png';
+	import seeds_cartoon from '$lib/assets/seeds cartoon.png';
+	import small_bag_small from '$lib/assets/small bag small.png';
+	import small_bag from '$lib/assets/small bag.png';
+	import soy_container_small from '$lib/assets/soy container small.png';
+	import soy_container from '$lib/assets/soy container.png';
+	import taco_avocado from '$lib/assets/taco avocado.png';
+	import taco_chipotle_line from '$lib/assets/taco chipotle line.png';
+	import taco_chipotle_squiggle from '$lib/assets/taco chipotle squiggle.png';
+	import taco_coleslaw from '$lib/assets/taco coleslaw.png';
+	import taco_green_onion from '$lib/assets/taco green onion.png';
+	import taco_salmon from '$lib/assets/taco salmon.png';
+	import taco_sesame_seeds from '$lib/assets/taco sesame seeds.png';
+	import taco_stand from '$lib/assets/taco stand.png';
+	import tacobox from '$lib/assets/tacobox.png';
+	import tacos from '$lib/assets/tacos.png';
+	import tile_small from '$lib/assets/tile small.png';
+	import tile from '$lib/assets/tile.png';
 
 	type TicketData = {
 		server: string;
@@ -415,61 +468,61 @@
 	class:cursor={!isWearingGlove}
 	class:workspace-floor={currentArea === 'workspace'}
 	style={`
-		--action_icon: url(assets/action%20icon.png);\
-		--avocado-slice-background: url(assets/avocado-slice-background.png);\
-		--coleslaw: url(assets/coleslaw.png);\
-		--cucumber_cartoon: url(assets/cucumber%20cartoon.png);\
-		--cursor_glove: url(assets/cursor%20glove.png);\
-		--cursor: url(assets/cursor.png);\
-		--cutting_board: url(assets/cutting%20board.png);\
-		--edamame-background: url(assets/edamame-background.png);\
-		--flakes_cartoon: url(assets/flakes%20cartoon.png);\
-		--floor_light: url(assets/floor%20light.png);\
-		--floor_light2: url(assets/floor%20light2.png);\
-		--gloved_cursor: url(assets/gloved%20cursor.png);\
-		--gloveless_cursor: url(assets/gloveless%20cursor.png);\
-		--large_bag_small: url(assets/large%20bag%20small.png);\
-		--large_bag: url(assets/large%20bag.png);\
-		--long_table_down_small: url(assets/long%20table%20down%20small.png);\
-		--long_table_down: url(assets/long%20table%20down.png);\
-		--long_table_left_small: url(assets/long%20table%20left%20small.png);\
-		--long_table_left: url(assets/long%20table%20left.png);\
-		--long_table_right_small: url(assets/long%20table%20right%20small.png);\
-		--long_table_right: url(assets/long%20table%20right.png);\
-		--long_table_up_small: url(assets/long%20table%20up%20small.png);\
-		--long_table_up: url(assets/long%20table%20up.png);\
-		--mango_cartoon: url(assets/mango%20cartoon.png);\
-		--metal_bowl_small: url(assets/metal%20bowl%20small.png);\
-		--metal_bowl: url(assets/metal%20bowl.png);\
-		--metal_table: url(assets/metal%20table.png);\
 		--napkins_small: url(${napkins_small});\
 		--napkins: url(${napkins});\
-		--plastic_bowl_lid_small: url(assets/plastic%20bowl%20lid%20small.png);\
-		--plastic_bowl_lid: url(assets/plastic%20bowl%20lid.png);\
-		--plastic_bowl_small: url(assets/plastic%20bowl%20small.png);\
-		--plastic_bowl: url(assets/plastic%20bowl.png);\
-		--platic_bowl_lid: url(assets/platic%20bowl%20lid.png);\
-		--rice_cartoon: url(assets/rice%20cartoon.png);\
-		--salmon_cartoon: url(assets/salmon%20cartoon.png);\
-		--salmon_small: url(assets/salmon%20small.png);\
-		--salmon: url(assets/salmon.png);\
-		--seeds_cartoon: url(assets/seeds%20cartoon.png);\
-		--small_bag_small: url(assets/small%20bag%20small.png);\
-		--small_bag: url(assets/small%20bag.png);\
-		--soy_container_small: url(assets/soy%20container%20small.png);\
-		--soy_container: url(assets/soy%20container.png);\
-		--taco_avocado: url(assets/taco%20avocado.png);\
-		--taco_chipotle_line: url(assets/taco%20chipotle%20line.png);\
-		--taco_chipotle_squiggle: url(assets/taco%20chipotle%20squiggle.png);\
-		--taco_coleslaw: url(assets/taco%20coleslaw.png);\
-		--taco_green_onion: url(assets/taco%20green%20onion.png);\
-		--taco_salmon: url(assets/taco%20salmon.png);\
-		--taco_sesame_seeds: url(assets/taco%20sesame%20seeds.png);\
-		--taco_stand: url(assets/taco%20stand.png);\
-		--tacobox: url(assets/tacobox.png);\
-		--tacos: url(assets/tacos.png);\
-		--tile_small: url(assets/tile%20small.png);\
-		--tile: url(assets/tile.png);\
+		--action_icon: url(${action_icon});\
+		--avocado_slice_background: url(${avocado_slice_background});\
+		--coleslaw: url(${coleslaw});\
+		--cucumber_cartoon: url(${cucumber_cartoon});\
+		--cursor_glove: url(${cursor_glove});\
+		--cursor: url(${cursor});\
+		--cutting_board: url(${cutting_board});\
+		--edamame_background: url(${edamame_background});\
+		--flakes_cartoon: url(${flakes_cartoon});\
+		--floor_light: url(${floor_light});\
+		--floor_light2: url(${floor_light2});\
+		--gloved_cursor: url(${gloved_cursor});\
+		--gloveless_cursor: url(${gloveless_cursor});\
+		--large_bag_small: url(${large_bag_small});\
+		--large_bag: url(${large_bag});\
+		--long_table_down_small: url(${long_table_down_small});\
+		--long_table_down: url(${long_table_down});\
+		--long_table_left_small: url(${long_table_left_small});\
+		--long_table_left: url(${long_table_left});\
+		--long_table_right_small: url(${long_table_right_small});\
+		--long_table_right: url(${long_table_right});\
+		--long_table_up_small: url(${long_table_up_small});\
+		--long_table_up: url(${long_table_up});\
+		--mango_cartoon: url(${mango_cartoon});\
+		--metal_bowl_small: url(${metal_bowl_small});\
+		--metal_bowl: url(${metal_bowl});\
+		--metal_table: url(${metal_table});\
+		--plastic_bowl_lid_small: url(${plastic_bowl_lid_small});\
+		--plastic_bowl_lid: url(${plastic_bowl_lid});\
+		--plastic_bowl_small: url(${plastic_bowl_small});\
+		--plastic_bowl: url(${plastic_bowl});\
+		--platic_bowl_lid: url(${platic_bowl_lid});\
+		--rice_cartoon: url(${rice_cartoon});\
+		--salmon_cartoon: url(${salmon_cartoon});\
+		--salmon_small: url(${salmon_small});\
+		--salmon: url(${salmon});\
+		--seeds_cartoon: url(${seeds_cartoon});\
+		--small_bag_small: url(${small_bag_small});\
+		--small_bag: url(${small_bag});\
+		--soy_container_small: url(${soy_container_small});\
+		--soy_container: url(${soy_container});\
+		--taco_avocado: url(${taco_avocado});\
+		--taco_chipotle_line: url(${taco_chipotle_line});\
+		--taco_chipotle_squiggle: url(${taco_chipotle_squiggle});\
+		--taco_coleslaw: url(${taco_coleslaw});\
+		--taco_green_onion: url(${taco_green_onion});\
+		--taco_salmon: url(${taco_salmon});\
+		--taco_sesame_seeds: url(${taco_sesame_seeds});\
+		--taco_stand: url(${taco_stand});\
+		--tacobox: url(${tacobox});\
+		--tacos: url(${tacos});\
+		--tile_small: url(${tile_small});\
+		--tile: url(${tile});\
 		`}
 >
 	<div class="floorshading"></div>
@@ -812,7 +865,7 @@
 		height: 85vh;
 		width: 100vw;
 		padding-bottom: 30px;
-		background: url('assets/long%20table%20down.png') repeat-x;
+		background: var(--long_table_down) repeat-x;
 		background-size: auto 100%;
 		/* TEST HERE */
 	}
