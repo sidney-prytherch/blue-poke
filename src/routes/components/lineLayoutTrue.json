@@ -292,7 +292,7 @@
         {
             "name": "Edamame",
             "code-name": "edamame",
-            "image-name": "edamame-background.png",
+            "image-name": "edamame%20background.png",
             "color-code": "rgb(97, 178, 97)",
             "len": 2
         },
@@ -419,7 +419,7 @@
             "name": "Avocado",
             "code-name": "avocado",
             "color-code": "rgb(50, 127, 9)",
-            "image-name": "avocado-slice-background.png",
+            "image-name": "avocado%20slice%20background.png",
             "len": 2
         },
         {
