@@ -1,5 +1,7 @@
 <script lang="ts">
 	import lineLayout from './lineLayoutTrue.json';
+	import napkins from 'assets/napkins.png';
+	import napkins_small from 'assets/napkins_small.png';
 
 	type TicketData = {
 		server: string;
@@ -440,8 +442,8 @@
 		--metal_bowl_small: url(assets/metal%20bowl%20small.png);\
 		--metal_bowl: url(assets/metal%20bowl.png);\
 		--metal_table: url(assets/metal%20table.png);\
-		--napkins_small: url(assets/napkins%20small.png);\
-		--napkins: url(assets/napkins.png);\
+		--napkins_small: url(${napkins_small});\
+		--napkins: url(${napkins});\
 		--plastic_bowl_lid_small: url(assets/plastic%20bowl%20lid%20small.png);\
 		--plastic_bowl_lid: url(assets/plastic%20bowl%20lid.png);\
 		--plastic_bowl_small: url(assets/plastic%20bowl%20small.png);\
