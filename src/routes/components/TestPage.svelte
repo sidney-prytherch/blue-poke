@@ -755,8 +755,9 @@
 		height: 85vh;
 		width: 100vw;
 		padding-bottom: 30px;
-		background: url('assets/long table down.png') repeat-x;
+		background: url('assets/long%20table%20down.png') repeat-x;
 		background-size: auto 100%;
+		/* TEST HERE */
 	}
 
 	.prep-table-prep-area > div {
