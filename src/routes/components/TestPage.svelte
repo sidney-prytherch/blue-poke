@@ -1,7 +1,7 @@
 <script lang="ts">
 	import lineLayout from './lineLayoutTrue.json';
 	import napkins from '$lib/assets/napkins.png';
-	import napkins_small from '$lib/assets/napkins_small.png';
+	import napkins_small from '$lib/assets/napkins small.png';
 
 	type TicketData = {
 		server: string;
