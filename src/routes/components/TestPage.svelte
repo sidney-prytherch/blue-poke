@@ -589,7 +589,7 @@
 												<div
 													class="single"
 													style={item['image-name'] && item['image-name'] !== ''
-														? `background: url(assets/${item['image-name']}) round;`
+														? `background: url(assets/${item['image-name']}) no-repeat, #00000044;`
 														: `background-color: ${item['color-code']};`}
 													role="presentation"
 													onclick={() => addItemToHand(item['class-name'] || '')}
@@ -605,7 +605,7 @@
 															circularItem.isSauce}
 														class="circle"
 														style={circularItem['image-name'] && circularItem['image-name'] !== ''
-															? `background: url(assets/${circularItem['image-name']}) round;`
+															? `background: url(assets/${circularItem['image-name']}) no-repeat, #00000044;`
 															: `background-color: ${circularItem['color-code']};`}
 														role="presentation"
 														onclick={() => addItemToHand(circularItem['class-name'] || '')}
@@ -622,7 +622,7 @@
 												<div
 													class="single"
 													style={item['image-name'] && item['image-name'] !== ''
-														? `background: url(assets/${item['image-name']}) round;`
+														? `background: url(assets/${item['image-name']}) no-repeat, #00000044;`
 														: `background-color: ${item['color-code']};`}
 													role="presentation"
 													onclick={() => addItemToHand(item['class-name'] || '')}
@@ -638,7 +638,7 @@
 															circularItem.isSauce}
 														class="circle"
 														style={circularItem['image-name'] && circularItem['image-name'] !== ''
-															? `background: url(assets/${circularItem['image-name']}) round;`
+															? `background: url(assets/${circularItem['image-name']}) no-repeat, #00000044;`
 															: `background-color: ${circularItem['color-code']};`}
 														role="presentation"
 														onclick={() => addItemToHand(circularItem['class-name'] || '')}
@@ -799,6 +799,7 @@
 </div>
 
 <style>
+
 	.item-action {
 		position: absolute;
 		min-width: 10%;
@@ -1389,11 +1390,14 @@
 	}
 	.square {
 		flex: 1;
+		padding: 1px 3px 1px 3px !important;
 	}
 	.rect {
 		flex: 2;
-		padding: 0px var(--border-size) 0px var(--border-size) !important;
-		background-repeat: round !important;
+		/* margin: 0px var(--border-size) 0px var(--border-size) !important; */
+		background-size: 10px 10px;
+		padding: 1px 6px 1px 6px !important;
+		/* padding-right: 6px !important; */
 	}
 	.divider {
 		min-width: var(--divider-size) !important;
@@ -1403,14 +1407,14 @@
 	.square,
 	.rect,
 	.line-container {
-		border: solid #00000022 var(--border-size);
+		/* border: solid transparent var(--border-size); */
 		overflow-x: hidden;
+		background-color: #00000022 !important;
 	}
 	.square,
 	.rect,
 	.full,
 	.line-container {
-		background-color: transparent;
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
@@ -1418,20 +1422,25 @@
 	}
 	.square > .single,
 	.rect > .single {
+		background-color: #00000044;
 		color: white;
 		justify-content: center;
 		text-align: center;
+		background-size: 100% 100% !important;
 		text-shadow:
 			1px 1px 2px black,
 			0 0 1em black,
 			0 0 0.2em black;
+		border-radius: 4px;
 	}
 	.square > .single {
 		min-height: 100% !important;
+		/* min-width: 100px; */
 		aspect-ratio: 1 / 1 !important;
 	}
 	.rect > .single {
 		min-height: 100% !important;
+		/* min-width: 200px; */
 		aspect-ratio: 2 / 1 !important;
 	}
 	.three-row-space {
